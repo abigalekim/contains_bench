@@ -8,8 +8,6 @@ set(CMAKE_CUDA_COMPILER "${CONDA_ENV_PATH}/bin/nvcc")
 
 set(CMAKE_CUDA_COMPILER_FORCED TRUE)
 
-project(contains_bench LANGUAGES CXX CUDA)
-
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
@@ -19,6 +17,10 @@ set(CMAKE_CUDA_STANDARD_REQUIRED ON)
 add_definitions(-DLIBCUDACXX_ENABLE_EXPERIMENTAL_MEMORY_RESOURCE)
 set(CMAKE_CUDA_FLAGS "${CMAKE_CUDA_FLAGS} -lcuda -lcudart -lcupti -lcurand -lcudadevrt --expt-extended-lambda --expt-relaxed-constexpr -rdc=true")
 set(CMAKE_CUDA_SEPARABLE_COMPILATION ON)
+set(CMAKE_CUDA_ARCHITECTURES 80)
+
+
+project(contains_bench LANGUAGES CXX CUDA)
 
 find_library(CUDA_CUDART_LIBRARY NAMES cudart PATHS ${CONDA_ENV_PATH}/lib REQUIRED)
 find_library(CUDA_CUDADEVRT_LIBRARY NAMES cudadevrt PATHS ${CONDA_ENV_PATH}/lib REQUIRED)
@@ -36,6 +38,7 @@ set(ENV{PKG_CONFIG_PATH} "${CONDA_ENV_PATH}/lib/pkgconfig:$ENV{PKG_CONFIG_PATH}"
 find_package(PkgConfig REQUIRED)
 find_library(cudf_library NAMES cudf PATHS ${CONDA_ENV_PATH}/lib REQUIRED)
 find_library(rmm_library NAMES rmm PATHS ${CONDA_ENV_PATH}/lib REQUIRED)
+find_library(rapids_logger_library NAMES rapids_logger PATHS ${CONDA_ENV_PATH}/lib REQUIRED)
 
 message(STATUS "Found cudf at: ${cudf_library}")
 message(STATUS "Found rmm at: ${rmm_library}")
@@ -51,5 +54,6 @@ target_include_directories(contains_bench PRIVATE
 target_link_libraries(contains_bench PRIVATE
   ${cudf_library}
   ${rmm_library}
+  ${rapids_logger_library}
   ${CUDA_LIBRARIES}
 )
