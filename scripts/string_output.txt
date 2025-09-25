@@ -1,0 +1,86 @@
+Filename: libcudf_bench/uniform_8.csv
+Filename: libcudf_bench/uniform_16.csv
+335544319 256 256
+335544319 256 256
+335544319 256 256
+Contains query average: 6.2066
+Filename: libcudf_bench/uniform_32.csv
+167772159 256 256
+167772159 256 256
+167772159 256 256
+Contains query average: 6.119
+Filename: libcudf_bench/uniform_64.csv
+83886079 256 256
+83886079 256 256
+83886079 256 256
+Contains query average: 15.088
+Filename: libcudf_bench/uniform_128.csv
+41943039 256 256
+41943039 256 256
+41943039 256 256
+Contains query average: 43.818
+Filename: libcudf_bench/uniform_256.csv
+20971519 256 256
+20971519 256 256
+Contains query average: 52.839
+Filename: libcudf_bench/uniform_512.csv
+10485759 256 256
+10485759 256 256
+Contains query average: 60.6
+Filename: libcudf_bench/uniform_1024.csv
+5242879 256 256
+5242879 256 256
+Contains query average: 76.332
+Filename: libcudf_bench/uniform_2048.csv
+2621439 256 256
+2621439 256 256
+Contains query average: 71.272
+Filename: libcudf_bench/uniform_4096.csv
+1310719 256 256
+1310719 256 256
+Contains query average: 73.981
+Filename: libcudf_bench/skew_8.csv
+72142174 256 256
+72142174 256 256
+72142174 256 256
+Contains query average: 223.04
+Filename: libcudf_bench/skew_16.csv
+65160780 256 256
+65160780 256 256
+65160780 256 256
+Contains query average: 203.14
+Filename: libcudf_bench/skew_32.csv
+54594159 256 256
+54594159 256 256
+54594159 256 256
+Contains query average: 174.74
+Filename: libcudf_bench/skew_64.csv
+41224056 256 256
+41224056 256 256
+41224056 256 256
+Contains query average: 135.52
+Filename: libcudf_bench/skew_128.csv
+27670929 256 256
+27670929 256 256
+27670929 256 256
+Contains query average: 97.507
+Filename: libcudf_bench/skew_256.csv
+16694061 256 256
+16694061 256 256
+Contains query average: 67.987
+Filename: libcudf_bench/skew_512.csv
+9308677 256 256
+9308677 256 256
+Contains query average: 53.148
+Filename: libcudf_bench/skew_1024.csv
+4938819 256 256
+4938819 256 256
+Contains query average: 49.091
+Filename: libcudf_bench/skew_2048.csv
+2547265 256 256
+2547265 256 256
+Contains query average: 53.401
+Filename: libcudf_bench/skew_4096.csv
+1294027 256 256
+1294027 256 256
+Contains query average: 64.389

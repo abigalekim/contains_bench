@@ -57,3 +57,17 @@ target_link_libraries(contains_bench PRIVATE
   ${rapids_logger_library}
   ${CUDA_LIBRARIES}
 )
+
+add_executable(contains_test src/test.cpp)
+
+target_include_directories(contains_test PRIVATE
+    ${CONDA_ENV_PATH}/include
+)
+
+# Link libraries
+target_link_libraries(contains_test PRIVATE
+  ${cudf_library}
+  ${rmm_library}
+  ${rapids_logger_library}
+  ${CUDA_LIBRARIES}
+)
