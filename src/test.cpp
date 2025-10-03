@@ -45,8 +45,10 @@ int main(int argc, char** argv) {
 
   std::string argument = std::string(argv[1]);
   std::string request;
+  std::string output_filename = argument + ".txt";
   std::string csv_filename = "/mnt/wiscdb/abigale/string_dataset_csvs/";
 
+  
   if (argument == "tpch") {
     request = "requests";
     csv_filename = csv_filename + "tpch_dataset.csv";
@@ -96,13 +98,6 @@ int main(int argc, char** argv) {
             lengths->size() * sizeof(int32_t), 
             cudaMemcpyDeviceToHost);
 
-  // Now you can iterate
-  std::cout << "String lengths: ";
-  for (const auto& len : host_lengths) {
-      std::cout << len << " ";
-  }
-  std::cout << std::endl;
-
   auto search_scalar = cudf::string_scalar(request);
   std::cout << "Performing contains query for: \"" << request << "\"" << std::endl;
   std::unique_ptr<cudf::column> result = cudf::strings::contains(strings_col, search_scalar);
@@ -110,7 +105,7 @@ int main(int argc, char** argv) {
   columns.push_back(std::move(result));
   auto result_table = std::make_unique<cudf::table>(std::move(columns));
 
-  cudf::io::sink_info sink("output.txt");
+  cudf::io::sink_info sink(output_filename);
   cudf::io::csv_writer_options write_options = 
       cudf::io::csv_writer_options::builder(sink, result_table->view())
           .include_header(false)

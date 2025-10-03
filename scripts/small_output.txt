@@ -1,0 +1,55 @@
+Filename: uniform_dist_small_16_1000.csv
+526879 256 256
+526879 256 256
+526879 256 256
+Contains query average: 0.1022
+Filename: uniform_dist_small_16_2000.csv
+131140 256 256
+131140 256 256
+131140 256 256
+Contains query average: 0.0714
+Filename: uniform_dist_small_16_20000.csv
+1328 256 256
+1328 256 256
+1328 256 256
+Contains query average: 0.0608
+Filename: uniform_dist_small_16_128.csv
+32336758 256 256
+32336758 256 256
+32336758 256 256
+Contains query average: 2.5142
+Filename: normal_small_16_1000.csv
+380065 256 256
+380065 256 256
+380065 256 256
+Contains query average: 0.0898
+Filename: normal_small_16_2000.csv
+152366 256 256
+152366 256 256
+152366 256 256
+Contains query average: 0.0714
+Filename: normal_small_16_20000.csv
+12542 256 256
+12542 256 256
+12542 256 256
+Contains query average: 0.0548
+Filename: normal_small_16_128.csv
+30122028 256 256
+30122028 256 256
+30122028 256 256
+Contains query average: 2.511
+Filename: skew_small_16.csv
+64944299 256 256
+64944299 256 256
+64944299 256 256
+Contains query average: 1.0588
+Filename: skew_small_32.csv
+54412784 256 256
+54412784 256 256
+54412784 256 256
+Contains query average: 1.9834
+Filename: skew_small_64.csv
+41087099 256 256
+41087099 256 256
+41087099 256 256
+Contains query average: 7.4296

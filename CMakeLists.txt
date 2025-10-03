@@ -71,3 +71,17 @@ target_link_libraries(contains_test PRIVATE
   ${rapids_logger_library}
   ${CUDA_LIBRARIES}
 )
+
+add_executable(contains_baseline src/heterogeneous_baseline.cpp)
+
+target_include_directories(contains_baseline PRIVATE
+    ${CONDA_ENV_PATH}/include
+)
+
+# Link libraries
+target_link_libraries(contains_baseline PRIVATE
+  ${cudf_library}
+  ${rmm_library}
+  ${rapids_logger_library}
+  ${CUDA_LIBRARIES}
+)
