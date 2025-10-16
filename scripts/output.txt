@@ -1,0 +1,2 @@
+Starting writing data for bimodal distribution (32, 10), (8000, 500)
+7866
