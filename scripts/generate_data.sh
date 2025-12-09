@@ -34,12 +34,12 @@
 #/home/abigale/miniconda3/bin/python3 uniform_dist.py 16 2000
 #/home/abigale/miniconda3/bin/python3 uniform_dist.py 16 20000
 #/home/abigale/miniconda3/bin/python3 uniform_dist.py 16 128
-/home/abigale/miniconda3/bin/python3 bimodal_dist.py 16 5 512 100
-/home/abigale/miniconda3/bin/python3 bimodal_dist.py 32 10 512 100
-/home/abigale/miniconda3/bin/python3 bimodal_dist.py 64 20 512 100
-/home/abigale/miniconda3/bin/python3 bimodal_dist.py 16 5 8192 500
-/home/abigale/miniconda3/bin/python3 bimodal_dist.py 32 10 8192 500
-/home/abigale/miniconda3/bin/python3 bimodal_dist.py 64 20 8192 500
-/home/abigale/miniconda3/bin/python3 bimodal_dist.py 16 5 65536 2000
-/home/abigale/miniconda3/bin/python3 bimodal_dist.py 32 10 65536 2000
-/home/abigale/miniconda3/bin/python3 bimodal_dist.py 64 20 65536 2000
+/home/abigale/miniconda3/bin/python3 split_skew_datasets.py 16 5 512 100
+/home/abigale/miniconda3/bin/python3 split_skew_datasets.py 32 10 512 100
+/home/abigale/miniconda3/bin/python3 split_skew_datasets.py 64 20 512 100
+/home/abigale/miniconda3/bin/python3 split_skew_datasets.py 16 5 8192 500
+/home/abigale/miniconda3/bin/python3 split_skew_datasets.py 32 10 8192 500
+/home/abigale/miniconda3/bin/python3 split_skew_datasets.py 64 20 8192 500
+/home/abigale/miniconda3/bin/python3 split_skew_datasets.py 16 5 65536 2000
+/home/abigale/miniconda3/bin/python3 split_skew_datasets.py 32 10 65536 2000
+/home/abigale/miniconda3/bin/python3 split_skew_datasets.py 64 20 65536 2000

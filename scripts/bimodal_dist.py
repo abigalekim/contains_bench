@@ -2,6 +2,7 @@ import csv
 from lorem_text import lorem
 import sys
 import numpy as np
+import random
 
 output_dir = "/mnt/wiscdb/abigale/string_dataset_csvs/libcudf_bench"
 
@@ -30,10 +31,9 @@ if __name__ == '__main__':
   gb_written = 0
 
   print(f"Starting writing data for bimodal distribution ({mean1}, {sigma1}), ({mean2}, {sigma2})")
-  big_dist = True
   while total_bytes < total_len:
-    string_size =  int(np.random.normal(loc=mean2, scale=sigma2)) if big_dist else int(np.random.normal(loc=mean1, scale=sigma1))
-    big_dist = not big_dist
+    small_dist = random.random() < 0.995
+    string_size =  int(np.random.normal(loc=mean1, scale=sigma1)) if small_dist else int(np.random.normal(loc=mean2, scale=sigma2))
     string_size = max(1, string_size)
     starting_word_size = (string_size // 5) + 5
     word = generate_text(string_size, starting_word_size)
@@ -43,4 +43,4 @@ if __name__ == '__main__':
     current_gb = total_bytes // GIGABYTE
     if current_gb > gb_written:
       gb_written = current_gb
-      print(f"Written {gb_written} GB of data ({total_bytes:,} bytes)")
+      print(f"Written {gb_written} GB of data ({total_bytes} bytes)")

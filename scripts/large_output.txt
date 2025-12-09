@@ -1,178 +1,22 @@
-Filename: uniform_dist_large_16_1000.csv
-10042832 256 256
-10042832 256 256
-Does this work?10042832
-321370624 256 256
-Does this work?10042832
-321370624 256 256
-Does this work?10042832
-321370624 256 256
-Does this work?10042832
-321370624 256 256
-Does this work?10042832
-321370624 256 256
-Does this work?10042832
-321370624 256 256
-Contains query average: 13.199
-Filename: uniform_dist_large_16_2000.csv
-5193764 256 256
-5193764 256 256
-Does this work?5193764
-166200448 256 256
-Does this work?5193764
-166200448 256 256
-Does this work?5193764
-166200448 256 256
-Does this work?5193764
-166200448 256 256
-Does this work?5193764
-166200448 256 256
-Does this work?5193764
-166200448 256 256
-Contains query average: 12.46
-Filename: uniform_dist_large_16_20000.csv
-535272 256 256
-535272 256 256
-Does this work?535272
-17128704 256 256
-Does this work?535272
-17128704 256 256
-Does this work?535272
-17128704 256 256
-Does this work?535272
-17128704 256 256
-Does this work?535272
-17128704 256 256
-Does this work?535272
-17128704 256 256
-Contains query average: 11.327
-Filename: uniform_dist_large_16_128.csv
-42231460 256 256
-42231460 256 256
-42231460 256 256
-Does this work?42231460
-1351406720 256 256
-Does this work?42231460
-1351406720 256 256
-Does this work?42231460
-1351406720 256 256
-Does this work?42231460
-1351406720 256 256
-Does this work?42231460
-1351406720 256 256
-Does this work?42231460
-1351406720 256 256
-Contains query average: 16.33
-Filename: normal_large_16_1000.csv
-10199330 256 256
-10199330 256 256
-Does this work?10199330
-326378560 256 256
-Does this work?10199330
-326378560 256 256
-Does this work?10199330
-326378560 256 256
-Does this work?10199330
-326378560 256 256
-Does this work?10199330
-326378560 256 256
-Does this work?10199330
-326378560 256 256
-Contains query average: 13.105
-Filename: normal_large_16_2000.csv
-5177767 256 256
-5177767 256 256
-Does this work?5177767
-165688544 256 256
-Does this work?5177767
-165688544 256 256
-Does this work?5177767
-165688544 256 256
-Does this work?5177767
-165688544 256 256
-Does this work?5177767
-165688544 256 256
-Does this work?5177767
-165688544 256 256
-Contains query average: 12.029
-Filename: normal_large_16_20000.csv
-523473 256 256
-523473 256 256
-Does this work?523473
-16751136 256 256
-Does this work?523473
-16751136 256 256
-Does this work?523473
-16751136 256 256
-Does this work?523473
-16751136 256 256
-Does this work?523473
-16751136 256 256
-Does this work?523473
-16751136 256 256
-Contains query average: 11.111
-Filename: normal_large_16_128.csv
-44938134 256 256
-44938134 256 256
-44938134 256 256
-Does this work?44938134
-1438020288 256 256
-Does this work?44938134
-1438020288 256 256
-Does this work?44938134
-1438020288 256 256
-Does this work?44938134
-1438020288 256 256
-Does this work?44938134
-1438020288 256 256
-Does this work?44938134
-1438020288 256 256
-Contains query average: 17.344
-Filename: skew_large_16.csv
-216480 256 256
-216480 256 256
-Does this work?216480
-6927360 256 256
-Does this work?216480
-6927360 256 256
-Does this work?216480
-6927360 256 256
-Does this work?216480
-6927360 256 256
-Does this work?216480
-6927360 256 256
-Does this work?216480
-6927360 256 256
-Contains query average: 7.9812
-Filename: skew_large_32.csv
-181374 256 256
-181374 256 256
-Does this work?181374
-5803968 256 256
-Does this work?181374
-5803968 256 256
-Does this work?181374
-5803968 256 256
-Does this work?181374
-5803968 256 256
-Does this work?181374
-5803968 256 256
-Does this work?181374
-5803968 256 256
-Contains query average: 6.7032
-Filename: skew_large_64.csv
-136956 256 256
-136956 256 256
-Does this work?136956
-4382592 256 256
-Does this work?136956
-4382592 256 256
-Does this work?136956
-4382592 256 256
-Does this work?136956
-4382592 256 256
-Does this work?136956
-4382592 256 256
-Does this work?136956
-4382592 256 256
-Contains query average: 5.0882
+Filename: libcudf_bench/bimodal_large_16_5_512_100.csv
+Contains query average: 1.8532
+Filename: libcudf_bench/bimodal_large_32_10_512_100.csv
+Contains query average: 1.0546
+Filename: libcudf_bench/bimodal_large_64_20_512_100.csv
+Contains query average: 16.202
+Filename: libcudf_bench/bimodal_large_16_5_8192_500.csv
+Contains query average: 7.567
+Filename: libcudf_bench/bimodal_large_32_10_8192_500.csv
+Contains query average: 6.0978
+Filename: libcudf_bench/bimodal_large_64_20_8192_500.csv
+Contains query average: 15.754
+Filename: libcudf_bench/bimodal_large_16_5_65536_2000.csv
+Contains query average: 10.173
+Filename: libcudf_bench/bimodal_large_32_10_65536_2000.csv
+Contains query average: 10.023
+Filename: libcudf_bench/bimodal_large_64_20_65536_2000.csv
+Contains query average: 14.737
+Filename: skew_large_fb_comments.csv
+Contains query average: 15.757
+Filename: skew_large_fb_posts.csv
+Contains query average: 17.624

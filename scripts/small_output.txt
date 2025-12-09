@@ -1,55 +1,55 @@
-Filename: uniform_dist_small_16_1000.csv
-526879 256 256
-526879 256 256
-526879 256 256
-Contains query average: 0.1022
-Filename: uniform_dist_small_16_2000.csv
-131140 256 256
-131140 256 256
-131140 256 256
-Contains query average: 0.0714
-Filename: uniform_dist_small_16_20000.csv
-1328 256 256
-1328 256 256
-1328 256 256
-Contains query average: 0.0608
-Filename: uniform_dist_small_16_128.csv
-32336758 256 256
-32336758 256 256
-32336758 256 256
-Contains query average: 2.5142
-Filename: normal_small_16_1000.csv
-380065 256 256
-380065 256 256
-380065 256 256
-Contains query average: 0.0898
-Filename: normal_small_16_2000.csv
-152366 256 256
-152366 256 256
-152366 256 256
-Contains query average: 0.0714
-Filename: normal_small_16_20000.csv
-12542 256 256
-12542 256 256
-12542 256 256
-Contains query average: 0.0548
-Filename: normal_small_16_128.csv
-30122028 256 256
-30122028 256 256
-30122028 256 256
-Contains query average: 2.511
-Filename: skew_small_16.csv
-64944299 256 256
-64944299 256 256
-64944299 256 256
-Contains query average: 1.0588
-Filename: skew_small_32.csv
-54412784 256 256
-54412784 256 256
-54412784 256 256
-Contains query average: 1.9834
-Filename: skew_small_64.csv
-41087099 256 256
-41087099 256 256
-41087099 256 256
-Contains query average: 7.4296
+Filename: libcudf_bench/bimodal_small_16_5_512_100.csv
+297093545 256 256
+297093545 256 256
+297093545 256 256
+Contains query average: 6.9252
+Filename: libcudf_bench/bimodal_small_32_10_512_100.csv
+157507841 256 256
+157507841 256 256
+157507841 256 256
+Contains query average: 9.0996
+Filename: libcudf_bench/bimodal_small_64_20_512_100.csv
+42251839 256 256
+42251839 256 256
+42251839 256 256
+Contains query average: 3.593
+Filename: libcudf_bench/bimodal_small_16_5_8192_500.csv
+94809403 256 256
+94809403 256 256
+94809403 256 256
+Contains query average: 2.1616
+Filename: libcudf_bench/bimodal_small_32_10_8192_500.csv
+73864662 256 256
+73864662 256 256
+73864662 256 256
+Contains query average: 4.261
+Filename: libcudf_bench/bimodal_small_64_20_8192_500.csv
+26711219 256 256
+26711219 256 256
+26711219 256 256
+Contains query average: 2.2954
+Filename: libcudf_bench/bimodal_small_16_5_65536_2000.csv
+15546642 256 256
+15546642 256 256
+15546642 256 256
+Contains query average: 0.4172
+Filename: libcudf_bench/bimodal_small_32_10_65536_2000.csv
+14839801 256 256
+14839801 256 256
+14839801 256 256
+Contains query average: 0.9162
+Filename: libcudf_bench/bimodal_small_64_20_65536_2000.csv
+7130305 256 256
+7130305 256 256
+7130305 256 256
+Contains query average: 0.6754
+Filename: skew_small_fb_comments.csv
+11295909 256 256
+11295909 256 256
+11295909 256 256
+Contains query average: 0.9236
+Filename: skew_small_fb_posts.csv
+13728008 256 256
+13728008 256 256
+13728008 256 256
+Contains query average: 1.0976

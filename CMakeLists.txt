@@ -41,7 +41,6 @@ find_library(rmm_library NAMES rmm PATHS ${CONDA_ENV_PATH}/lib REQUIRED)
 find_library(rapids_logger_library NAMES rapids_logger PATHS ${CONDA_ENV_PATH}/lib REQUIRED)
 
 message(STATUS "Found cudf at: ${cudf_library}")
-message(STATUS "Found rmm at: ${rmm_library}")
 
 # Create executable
 add_executable(contains_bench src/bench.cpp)
