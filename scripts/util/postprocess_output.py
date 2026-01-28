@@ -52,36 +52,36 @@ large_files = [
 #for file in small_files:
 #  print(count_lines_sum_generator(os.path.join(prefix, file)))
 
-#o = open('output.txt', 'r')
+o = open('output.txt', 'r')
+o_lines = o.readlines()
+
+i = 0
+while i < len(o_lines):
+  # 6 is partition, 7 is thread, 8 is warp
+  if o_lines[i].startswith("Filename: "):
+    start_idx = i + 8
+    total = 0
+    for x in range(0,6):
+      actual_idx = start_idx + (x * 3)
+      num = float(o_lines[actual_idx].split(" ")[3].strip())
+      total += num
+    print(round(total/6, 2))
+    i = i + 25
+  else:
+    i += 1
+
+o.close()
+#o = open('string_output.txt', 'r')
 #o_lines = o.readlines()
 #
 #i = 0
 #while i < len(o_lines):
 #  if o_lines[i].startswith("Filename: "):
-#    start_idx = i + 8
-#    total = 0
-#    for x in range(0,6):
-#      actual_idx = start_idx + (x * 3)
-#      num = float(o_lines[actual_idx].split(" ")[3].strip())
-#      total += num
-#    print(round(total/6, 2))
-#    i = i + 25
+#    num = float(o_lines[i+1].split(" ")[3].strip())
+#    print(round(num, 2))
+#    i = i + 2
 #  else:
 #    i += 1
 #
 #o.close()
-
-o = open('string_output.txt', 'r')
-o_lines = o.readlines()
-
-i = 0
-while i < len(o_lines):
-  if o_lines[i].startswith("Filename: "):
-    num = float(o_lines[i+1].split(" ")[3].strip())
-    print(round(num, 2))
-    i = i + 2
-  else:
-    i += 1
-
-o.close()
 

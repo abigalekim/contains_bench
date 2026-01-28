@@ -24,8 +24,10 @@ if __name__ == '__main__':
   if len(sys.argv) == 1:
     print("Processing Reddit and Twitter datasets")
     dir = "/mnt/wiscdb/abigale/string_dataset_csvs/"
-    process(dir + "reddit_utf8.csv", dir + "skew_small_reddit.csv", dir + "skew_large_reddit.csv")
-    process(dir + "twitter_utf8.csv", dir + "skew_small_twitter.csv", dir + "skew_twitter.csv")
+    #process(dir + "reddit_utf8.csv", dir + "skew_small_reddit.csv", dir + "skew_large_reddit.csv")
+    #process(dir + "twitter_utf8.csv", dir + "skew_small_twitter.csv", dir + "skew_twitter.csv")
+    process(dir + "amazon_arts_and_crafts.csv", dir + "skew_small_amazon_arts_and_crafts.csv", dir + "skew_large_amazon_arts_and_crafts.csv")
+    process(dir + "yelp_reviews.csv", dir + "skew_small_yelp_reviews.csv", dir + "skew_large_yelp_reviews.csv")
   elif len(sys.argv) == 2:
     skew_size = int(sys.argv[1])
     filename = "/mnt/wiscdb/abigale/string_dataset_csvs/libcudf_bench/skew_" + str(skew_size) + ".csv"

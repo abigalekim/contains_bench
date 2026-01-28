@@ -1,3 +1,6 @@
 [submodule "facebook-news"]
 	path = facebook-news
 	url = https://github.com/jbencina/facebook-news.git
+[submodule "loghub"]
+	path = loghub
+	url = https://github.com/logpai/loghub.git
