@@ -100,7 +100,7 @@ int main(int argc, char** argv) {
 
   auto search_scalar = cudf::string_scalar(request);
   std::cout << "Performing contains query for: \"" << request << "\"" << std::endl;
-  std::unique_ptr<cudf::column> result = cudf::strings::contains_heterogeneous2(strings_col, search_scalar);
+  std::unique_ptr<cudf::column> result = cudf::strings::contains_heterogeneous3(strings_col, search_scalar);
   std::vector<std::unique_ptr<cudf::column>> columns;
   columns.push_back(std::move(result));
   auto result_table = std::make_unique<cudf::table>(std::move(columns));

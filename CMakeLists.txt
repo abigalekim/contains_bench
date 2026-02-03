@@ -84,3 +84,45 @@ target_link_libraries(contains_baseline PRIVATE
   ${rapids_logger_library}
   ${CUDA_LIBRARIES}
 )
+
+# Find Python and its development headers
+find_package(Python3 COMPONENTS Interpreter Development REQUIRED)
+
+# Get pandas include directory (for potential future use)
+execute_process(
+    COMMAND ${Python3_EXECUTABLE} -c "import pandas; print(pandas.__path__[0])"
+    OUTPUT_VARIABLE PANDAS_PATH
+    OUTPUT_STRIP_TRAILING_WHITESPACE
+)
+
+# Create pandas benchmark executable
+add_executable(pandas_bench src/pandas_bench.cpp)
+
+target_include_directories(pandas_bench PRIVATE
+    ${Python3_INCLUDE_DIRS}
+)
+
+# Link Python libraries
+target_link_libraries(pandas_bench PRIVATE
+    ${Python3_LIBRARIES}
+)
+
+# Set RPATH so it can find Python libraries at runtime
+set_target_properties(pandas_bench PROPERTIES
+    BUILD_RPATH_USE_ORIGIN TRUE
+    INSTALL_RPATH "${Python3_LIBRARY_DIRS}"
+)
+
+# Find DataFrame library (if installed system-wide)
+find_package(DataFrame REQUIRED)
+
+add_executable(dataframe_bench src/dataframe_bench.cpp)
+
+target_link_libraries(dataframe_bench PRIVATE
+    DataFrame::DataFrame
+)
+
+set_target_properties(dataframe_bench PROPERTIES
+    CXX_STANDARD 20
+    CXX_STANDARD_REQUIRED ON
+)

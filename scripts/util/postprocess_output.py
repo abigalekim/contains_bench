@@ -52,21 +52,15 @@ large_files = [
 #for file in small_files:
 #  print(count_lines_sum_generator(os.path.join(prefix, file)))
 
-o = open('output.txt', 'r')
+o = open('pandas.txt', 'r')
 o_lines = o.readlines()
 
 i = 0
 while i < len(o_lines):
   # 6 is partition, 7 is thread, 8 is warp
   if o_lines[i].startswith("Filename: "):
-    start_idx = i + 8
-    total = 0
-    for x in range(0,6):
-      actual_idx = start_idx + (x * 3)
-      num = float(o_lines[actual_idx].split(" ")[3].strip())
-      total += num
-    print(round(total/6, 2))
-    i = i + 25
+    print(o_lines[i+5].split()[3].strip())
+    i = i + 6
   else:
     i += 1
 
