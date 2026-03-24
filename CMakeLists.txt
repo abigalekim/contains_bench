@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.20)
 
-set(CONDA_ENV_PATH "/home/abigale/miniconda3/envs/cudf_dev")
+set(CONDA_ENV_PATH "/home/ubuntu/miniconda3/envs/cudf_dev")
 
 set(CMAKE_C_COMPILER "${CONDA_ENV_PATH}/bin/gcc")
 set(CMAKE_CXX_COMPILER "${CONDA_ENV_PATH}/bin/g++")
@@ -46,7 +46,10 @@ message(STATUS "Found cudf at: ${cudf_library}")
 add_executable(contains_bench src/bench.cpp)
 
 target_include_directories(contains_bench PRIVATE
-    ${CONDA_ENV_PATH}/include
+    ${CONDA_ENV_PATH}/include/rapids        # source-built CCCL, matches libcudf.so ABI
+    ${CONDA_ENV_PATH}/include               # everything else
+    ${CONDA_ENV_PATH}/targets/x86_64-linux/include
+    ${CONDA_ENV_PATH}/targets/x86_64-linux/include/cccl
 )
 
 # Link libraries

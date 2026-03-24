@@ -1,6 +1,6 @@
-#include <rmm/mr/device/per_device_resource.hpp>
-#include <rmm/mr/device/cuda_memory_resource.hpp>
-#include <rmm/mr/device/pool_memory_resource.hpp>
+#include <rmm/mr/per_device_resource.hpp>
+#include <rmm/mr/cuda_memory_resource.hpp>
+#include <rmm/mr/pool_memory_resource.hpp>
 
 #include <cudf/io/csv.hpp>
 #include <cudf/table/table.hpp>
@@ -34,7 +34,7 @@ int main(int argc, char** argv) {
   }
 
   std::string request = "Harum Hic Ex At";
-  std::string csv_filename = "/mnt/wiscdb/abigale/string_dataset_csvs/" + std::string(argv[1]);
+  std::string csv_filename = "/home/ubuntu/string_datasets/" + std::string(argv[1]);
   std::vector<std::string> col_names = {"value"};
 
   cudf::io::csv_reader_options options =
@@ -57,12 +57,12 @@ int main(int argc, char** argv) {
   {
     // cold run
     std::cout << "Running cold run...\n";
-    std::unique_ptr<cudf::column> result = cudf::strings::contains_heterogeneous2(strings_col, search_scalar);
+    std::unique_ptr<cudf::column> result = cudf::strings::contains(strings_col, search_scalar);
     cudaDeviceSynchronize();
 
     std::cout << "Running hot run...\n";
     auto start_time = std::chrono::high_resolution_clock::now();
-    std::unique_ptr<cudf::column> result1 = cudf::strings::contains_heterogeneous2(strings_col, search_scalar);
+    std::unique_ptr<cudf::column> result1 = cudf::strings::contains(strings_col, search_scalar);
     cudaDeviceSynchronize();
     auto end_time = std::chrono::high_resolution_clock::now();
   }
@@ -70,7 +70,7 @@ int main(int argc, char** argv) {
   float milliseconds_sum = 0.0f;
   for (int i = 0; i < 5; ++i) {
     auto start_time = std::chrono::high_resolution_clock::now();
-    std::unique_ptr<cudf::column> result = cudf::strings::contains_heterogeneous2(strings_col, search_scalar);
+    std::unique_ptr<cudf::column> result = cudf::strings::contains(strings_col, search_scalar);
     cudaDeviceSynchronize();
     auto end_time = std::chrono::high_resolution_clock::now();
     auto duration = std::chrono::duration_cast<std::chrono::microseconds>(end_time - start_time);

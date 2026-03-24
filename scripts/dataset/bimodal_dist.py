@@ -4,7 +4,7 @@ import sys
 import numpy as np
 import random
 
-output_dir = "/mnt/wiscdb/abigale/string_dataset_csvs/libcudf_bench"
+output_dir = "/home/ubuntu/string_datasets"
 
 GIGABYTE = 1073741824
 MEGABYTE = 1048576
@@ -27,7 +27,7 @@ if __name__ == '__main__':
   output_csv = csv.writer(output_file)
 
   total_bytes = 0
-  total_len = 5 * GIGABYTE
+  total_len = GIGABYTE
   gb_written = 0
 
   print(f"Starting writing data for bimodal distribution ({mean1}, {sigma1}), ({mean2}, {sigma2})")
