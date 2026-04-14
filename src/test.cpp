@@ -1,6 +1,6 @@
-#include <rmm/mr/device/per_device_resource.hpp>
-#include <rmm/mr/device/cuda_memory_resource.hpp>
-#include <rmm/mr/device/pool_memory_resource.hpp>
+#include <rmm/mr/per_device_resource.hpp>
+#include <rmm/mr/cuda_memory_resource.hpp>
+#include <rmm/mr/pool_memory_resource.hpp>
 
 #include <cudf/io/csv.hpp>
 #include <cudf/io/data_sink.hpp>
@@ -15,6 +15,11 @@
 #include <memory>
 
 int main(int argc, char** argv) {
+  if (argc < 2) {
+    std::cerr << "Error: did not pass enough arguments\n";
+    return 0;
+  }
+
    // Check available GPU memory first
    size_t free_mem, total_mem;
    cudaMemGetInfo(&free_mem, &total_mem);
@@ -24,8 +29,8 @@ int main(int argc, char** argv) {
   auto cuda_mr = std::make_shared<rmm::mr::cuda_memory_resource>();
 
   // Create pool with much smaller initial allocation and reasonable max
-  uint64_t initial_pool_size = 1UL * 1024UL * 1024UL * 1024UL;  // Start with 1GB
-  uint64_t max_pool_size = 37UL * 1024UL * 1024UL * 1024UL;     // Max 16GB
+  uint64_t initial_pool_size = 0UL;  // Start with 1GB
+  uint64_t max_pool_size = 38UL * 1024UL * 1024UL * 1024UL;
   
   auto pool_mr = std::make_shared<rmm::mr::pool_memory_resource<rmm::mr::cuda_memory_resource>>(
       cuda_mr.get(),
@@ -34,19 +39,15 @@ int main(int argc, char** argv) {
   );
   
   rmm::mr::set_current_device_resource(pool_mr.get());
+
   std::cout << "Memory pool initialized: " 
             << initial_pool_size / (1024*1024) << " MB initial, "
             << max_pool_size / (1024*1024) << " MB max" << std::endl;
 
-  if (argc < 2) {
-    std::cerr << "Error: did not pass enough arguments\n";
-    return 0;
-  }
-
   std::string argument = std::string(argv[1]);
   std::string request;
   std::string output_filename = argument + ".txt";
-  std::string csv_filename = "/mnt/wiscdb/abigale/string_dataset_csvs/";
+  std::string csv_filename = "/home/ubuntu/string_datasets/";
 
   
   if (argument == "tpch") {
@@ -59,6 +60,9 @@ int main(int argc, char** argv) {
   } else if (argument == "synthetic") {
     request = "Omnis Possimus";
     csv_filename = csv_filename + "synthetic_dataset.csv";
+  } else if (argument == "lineitem") {
+    request = "requests";
+    csv_filename = csv_filename + "lineitem.csv";
   } else {
     return 0;
   }
@@ -100,7 +104,7 @@ int main(int argc, char** argv) {
 
   auto search_scalar = cudf::string_scalar(request);
   std::cout << "Performing contains query for: \"" << request << "\"" << std::endl;
-  std::unique_ptr<cudf::column> result = cudf::strings::contains_heterogeneous3(strings_col, search_scalar);
+  std::unique_ptr<cudf::column> result = cudf::strings::contains(strings_col, search_scalar);
   std::vector<std::unique_ptr<cudf::column>> columns;
   columns.push_back(std::move(result));
   auto result_table = std::make_unique<cudf::table>(std::move(columns));

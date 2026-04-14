@@ -63,7 +63,10 @@ target_link_libraries(contains_bench PRIVATE
 add_executable(contains_test src/test.cpp)
 
 target_include_directories(contains_test PRIVATE
-    ${CONDA_ENV_PATH}/include
+  ${CONDA_ENV_PATH}/include/rapids        # source-built CCCL, matches libcudf.so ABI
+  ${CONDA_ENV_PATH}/include               # everything else
+  ${CONDA_ENV_PATH}/targets/x86_64-linux/include
+  ${CONDA_ENV_PATH}/targets/x86_64-linux/include/cccl
 )
 
 # Link libraries
@@ -77,7 +80,10 @@ target_link_libraries(contains_test PRIVATE
 add_executable(contains_baseline src/heterogeneous_baseline.cpp)
 
 target_include_directories(contains_baseline PRIVATE
-    ${CONDA_ENV_PATH}/include
+  ${CONDA_ENV_PATH}/include/rapids        # source-built CCCL, matches libcudf.so ABI
+  ${CONDA_ENV_PATH}/include               # everything else
+  ${CONDA_ENV_PATH}/targets/x86_64-linux/include
+  ${CONDA_ENV_PATH}/targets/x86_64-linux/include/cccl
 )
 
 # Link libraries
