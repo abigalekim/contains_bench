@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.20)
 
-set(CONDA_ENV_PATH "/home/ubuntu/miniconda3/envs/cudf_dev")
+set(CONDA_ENV_PATH "/home/akkim7/micromamba/envs/cudf_dev")
 
 set(CMAKE_C_COMPILER "${CONDA_ENV_PATH}/bin/gcc")
 set(CMAKE_CXX_COMPILER "${CONDA_ENV_PATH}/bin/g++")

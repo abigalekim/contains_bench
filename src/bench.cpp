@@ -1,6 +1,6 @@
-#include <rmm/mr/per_device_resource.hpp>
-#include <rmm/mr/cuda_memory_resource.hpp>
-#include <rmm/mr/pool_memory_resource.hpp>
+#include <rmm/mr/device/per_device_resource.hpp>
+#include <rmm/mr/device/cuda_memory_resource.hpp>
+#include <rmm/mr/device/pool_memory_resource.hpp>
 
 #include <cudf/io/csv.hpp>
 #include <cudf/table/table.hpp>
