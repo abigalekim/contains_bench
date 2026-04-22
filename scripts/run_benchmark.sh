@@ -1,22 +1,21 @@
-python3 pandas_bench.py libcudf_bench/skew_16.csv
-python3 pandas_bench.py libcudf_bench/skew_32.csv
-python3 pandas_bench.py libcudf_bench/skew_64.csv
-python3 pandas_bench.py libcudf_bench/uniform_dist_16_128.csv
-python3 pandas_bench.py libcudf_bench/normal_16_128.csv
-python3 pandas_bench.py libcudf_bench/bimodal_16_5_512_100.csv
-python3 pandas_bench.py libcudf_bench/bimodal_32_10_512_100.csv
-python3 pandas_bench.py libcudf_bench/bimodal_64_20_512_100.csv
-python3 pandas_bench.py libcudf_bench/bimodal_16_5_8192_500.csv
-python3 pandas_bench.py libcudf_bench/bimodal_32_10_8192_500.csv
-python3 pandas_bench.py libcudf_bench/bimodal_64_20_8192_500.csv
-python3 pandas_bench.py libcudf_bench/bimodal_16_5_65536_2000.csv  
-python3 pandas_bench.py libcudf_bench/bimodal_32_10_65536_2000.csv
-python3 pandas_bench.py libcudf_bench/bimodal_64_20_65536_2000.csv
-python3 pandas_bench.py fb_comments.csv
-python3 pandas_bench.py fb_posts.csv
-python3 pandas_bench.py reddit.csv
-python3 pandas_bench.py twitter.csv
-python3 pandas_bench.py amazon_arts_and_crafts.csv
-python3 pandas_bench.py yelp_reviews.csv
-python3 pandas_bench.py github_commits.csv
-python3 pandas_bench.py common_crawl_urls.csv
+../build/contains_bench skew_16.csv
+../build/contains_bench skew_32.csv
+../build/contains_bench skew_64.csv
+../build/contains_bench uniform_dist_16_128.csv
+../build/contains_bench normal_16_128.csv
+../build/contains_bench bimodal_16_5_512_100.csv
+../build/contains_bench bimodal_32_10_512_100.csv
+../build/contains_bench bimodal_64_20_512_100.csv
+../build/contains_bench bimodal_16_5_8192_500.csv
+../build/contains_bench bimodal_32_10_8192_500.csv
+../build/contains_bench bimodal_64_20_8192_500.csv
+../build/contains_bench bimodal_16_5_65536_2000.csv  
+../build/contains_bench bimodal_32_10_65536_2000.csv
+../build/contains_bench bimodal_64_20_65536_2000.csv
+../build/contains_bench fb_comments.csv
+../build/contains_bench fb_posts.csv
+../build/contains_bench reddit_utf8.csv
+../build/contains_bench twitter_utf8.csv
+../build/contains_bench amazon_arts_and_crafts.csv
+../build/contains_bench github_commits.csv
+../build/contains_bench common_crawl_urls.csv

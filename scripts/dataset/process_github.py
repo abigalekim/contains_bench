@@ -4,8 +4,8 @@ import sys
 
 csv.field_size_limit(sys.maxsize)
 
-input_file = "/home/abigale/.cache/kagglehub/datasets/dhruvildave/github-commit-messages-dataset/versions/3/full.csv"
-output_file = "/mnt/wiscdb/abigale/string_dataset_csvs/github_commits.csv"
+input_file = "/home/akkim7/.cache/kagglehub/datasets/dhruvildave/github-commit-messages-dataset/versions/3/full.csv"
+output_file = "/home/akkim7/string_datasets/github_commits.csv"
 lengths = []
 
 GIGABYTE = 1073741824
@@ -34,30 +34,30 @@ print(f"99th percentile: {sorted_lengths[int(len(sorted_lengths) * 0.99)]}")
 print(f"Strings < 32 bytes: {sum(1 for l in lengths if l < 32) / len(lengths) * 100:.2f}%")
 print(f"Strings > 8192 bytes: {sum(1 for l in lengths if l > 8192)}")
 
-## Write to CSV with 5GB upper bound
-#with open(output_file, "w", encoding="utf-8", newline='') as f_out:
-#    writer = csv.writer(f_out)
-#    total_bytes = 0
-#    total_len = 5 * GIGABYTE
-#    gb_written = 0
-#    row_idx = 0
-#    
-#    while total_bytes < total_len:
-#        message = commit_messages[row_idx]
-#        row_idx += 1
-#        if row_idx == len(commit_messages):
-#            row_idx = 0
-#        
-#        total_bytes += len(message)
-#        writer.writerow([message.replace("\n", " ")])  # Replace newlines with spaces
-#        
-#        current_gb = total_bytes // GIGABYTE
-#        if current_gb > gb_written:
-#            gb_written = current_gb
-#            print(f"Written {gb_written} GB of data ({total_bytes:,} bytes)")
-#
-#print("Done! CSV file written")
-#
+## Write to CSV with 2GB upper bound
+with open(output_file, "w", encoding="utf-8", newline='') as f_out:
+    writer = csv.writer(f_out)
+    total_bytes = 0
+    total_len = 3 * GIGABYTE
+    gb_written = 0
+    row_idx = 0
+    
+    while total_bytes < total_len:
+        message = commit_messages[row_idx]
+        row_idx += 1
+        if row_idx == len(commit_messages):
+            row_idx = 0
+        
+        total_bytes += len(message)
+        writer.writerow([message.replace("\n", " ")])  # Replace newlines with spaces
+        
+        current_gb = total_bytes // GIGABYTE
+        if current_gb > gb_written:
+            gb_written = current_gb
+            print(f"Written {gb_written} GB of data ({total_bytes:,} bytes)")
+
+print("Done! CSV file written")
+
 ## Plot histogram
 #plt.figure(figsize=(12, 6))
 #plt.hist(lengths, bins=100, edgecolor='black', alpha=0.7)

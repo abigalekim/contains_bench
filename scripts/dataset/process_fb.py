@@ -1,6 +1,6 @@
 import csv
 
-dir = "/mnt/wiscdb/abigale/string_dataset_csvs/"
+dir = "/home/akkim7/string_datasets/"
 GIGABYTE = 1073741824
 
 def process_csv(input_filename, index, output_filename):
@@ -16,7 +16,7 @@ def process_csv(input_filename, index, output_filename):
   print(len(inputrows))
 
   total_bytes = 0
-  total_len = 5 * GIGABYTE
+  total_len = 3 * GIGABYTE
   gb_written = 0
   row_idx = 0
 
