@@ -1,0 +1,550 @@
+Filename: skew_16.csv
+Running cold run...
+Partition time: 5.681728 ms
+Thread time: 1.660672 ms
+Warp time: 7.201472 ms
+Running hot run...
+Partition time: 1.590784 ms
+Thread time: 1.641280 ms
+Warp time: 7.194560 ms
+Partition time: 1.591264 ms
+Thread time: 1.641472 ms
+Warp time: 7.251936 ms
+Partition time: 1.593984 ms
+Thread time: 1.642304 ms
+Warp time: 7.644608 ms
+Partition time: 1.590592 ms
+Thread time: 1.643040 ms
+Warp time: 7.716448 ms
+Partition time: 1.593472 ms
+Thread time: 1.642784 ms
+Warp time: 7.980928 ms
+Partition time: 1.592768 ms
+Thread time: 1.642784 ms
+Warp time: 7.981536 ms
+Contains query average: 10.989
+Filename: skew_32.csv
+Running cold run...
+Partition time: 5.536608 ms
+Thread time: 2.947776 ms
+Warp time: 6.042912 ms
+Running hot run...
+Partition time: 1.335712 ms
+Thread time: 2.840192 ms
+Warp time: 6.035200 ms
+Partition time: 1.334304 ms
+Thread time: 2.874528 ms
+Warp time: 6.036096 ms
+Partition time: 1.337408 ms
+Thread time: 2.620384 ms
+Warp time: 6.467744 ms
+Partition time: 1.340320 ms
+Thread time: 2.568064 ms
+Warp time: 6.466592 ms
+Partition time: 1.340032 ms
+Thread time: 2.155552 ms
+Warp time: 6.638240 ms
+Partition time: 1.339648 ms
+Thread time: 2.155488 ms
+Warp time: 6.642560 ms
+Contains query average: 10.304
+Filename: skew_64.csv
+Running cold run...
+Partition time: 5.536544 ms
+Thread time: 5.905440 ms
+Warp time: 4.563968 ms
+Running hot run...
+Partition time: 1.016128 ms
+Thread time: 5.895296 ms
+Warp time: 4.529248 ms
+Partition time: 1.016384 ms
+Thread time: 5.851648 ms
+Warp time: 4.524288 ms
+Partition time: 1.015456 ms
+Thread time: 5.854368 ms
+Warp time: 4.793312 ms
+Partition time: 1.016704 ms
+Thread time: 6.667712 ms
+Warp time: 4.860096 ms
+Partition time: 1.023264 ms
+Thread time: 6.731808 ms
+Warp time: 4.902144 ms
+Partition time: 1.015840 ms
+Thread time: 6.730848 ms
+Warp time: 4.903040 ms
+Contains query average: 12.221
+Filename: uniform_dist_16_128.csv
+Running cold run...
+Partition time: 5.795744 ms
+Thread time: 3.934400 ms
+Warp time: 17.871168 ms
+Running hot run...
+Partition time: 1.818592 ms
+Thread time: 3.925184 ms
+Warp time: 17.629601 ms
+Partition time: 1.817152 ms
+Thread time: 3.997408 ms
+Warp time: 17.620512 ms
+Partition time: 1.814976 ms
+Thread time: 3.932640 ms
+Warp time: 17.636065 ms
+Partition time: 1.818336 ms
+Thread time: 3.942400 ms
+Warp time: 17.636320 ms
+Partition time: 1.815808 ms
+Thread time: 3.921504 ms
+Warp time: 17.629824 ms
+Partition time: 1.817376 ms
+Thread time: 3.894560 ms
+Warp time: 17.623968 ms
+Contains query average: 23.424
+Filename: normal_16_128.csv
+Running cold run...
+Partition time: 5.858592 ms
+Thread time: 4.446976 ms
+Warp time: 18.948704 ms
+Running hot run...
+Partition time: 1.831392 ms
+Thread time: 4.405920 ms
+Warp time: 18.745344 ms
+Partition time: 1.829952 ms
+Thread time: 4.381088 ms
+Warp time: 18.739552 ms
+Partition time: 1.830528 ms
+Thread time: 4.370464 ms
+Warp time: 18.722240 ms
+Partition time: 1.829664 ms
+Thread time: 4.408608 ms
+Warp time: 18.721344 ms
+Partition time: 1.828832 ms
+Thread time: 4.362752 ms
+Warp time: 18.611744 ms
+Partition time: 1.832544 ms
+Thread time: 4.357728 ms
+Warp time: 18.740225 ms
+Contains query average: 24.953
+Filename: bimodal_16_5_512_100.csv
+Running cold run...
+Partition time: 12.705216 ms
+Thread time: 7.291168 ms
+Warp time: 1.921664 ms
+Running hot run...
+Partition time: 9.415584 ms
+Thread time: 7.406880 ms
+Warp time: 2.027040 ms
+Partition time: 9.400480 ms
+Thread time: 7.486496 ms
+Warp time: 2.070976 ms
+Partition time: 9.414688 ms
+Thread time: 7.528928 ms
+Warp time: 2.086208 ms
+Partition time: 9.465248 ms
+Thread time: 7.540064 ms
+Warp time: 2.086304 ms
+Partition time: 9.441216 ms
+Thread time: 7.540768 ms
+Warp time: 2.086656 ms
+Partition time: 9.450048 ms
+Thread time: 7.541408 ms
+Warp time: 2.086272 ms
+Contains query average: 19.157
+Filename: bimodal_32_10_512_100.csv
+Running cold run...
+Partition time: 8.741888 ms
+Thread time: 8.678944 ms
+Warp time: 1.131296 ms
+Running hot run...
+Partition time: 5.022848 ms
+Thread time: 8.719424 ms
+Warp time: 1.130016 ms
+Partition time: 5.029920 ms
+Thread time: 8.889408 ms
+Warp time: 1.184384 ms
+Partition time: 5.029280 ms
+Thread time: 9.258496 ms
+Warp time: 1.184544 ms
+Partition time: 5.050016 ms
+Thread time: 9.514368 ms
+Warp time: 1.221408 ms
+Partition time: 5.043040 ms
+Thread time: 9.514176 ms
+Warp time: 1.220992 ms
+Partition time: 5.033888 ms
+Thread time: 9.467392 ms
+Warp time: 1.211360 ms
+Contains query average: 15.651
+Filename: bimodal_64_20_512_100.csv
+Running cold run...
+Partition time: 6.589088 ms
+Thread time: 5.863328 ms
+Warp time: 19.766785 ms
+Running hot run...
+Partition time: 2.597856 ms
+Thread time: 5.816608 ms
+Warp time: 19.549152 ms
+Partition time: 2.593664 ms
+Thread time: 5.794432 ms
+Warp time: 19.844831 ms
+Partition time: 2.609760 ms
+Thread time: 5.865664 ms
+Warp time: 19.701441 ms
+Partition time: 2.620736 ms
+Thread time: 5.799552 ms
+Warp time: 19.715904 ms
+Partition time: 2.600000 ms
+Thread time: 5.841888 ms
+Warp time: 19.851839 ms
+Partition time: 2.601856 ms
+Thread time: 5.853248 ms
+Warp time: 19.600576 ms
+Contains query average: 28.245
+Filename: bimodal_16_5_8192_500.csv
+Running cold run...
+Partition time: 7.288480 ms
+Thread time: 2.362432 ms
+Warp time: 7.052704 ms
+Running hot run...
+Partition time: 3.058144 ms
+Thread time: 2.343456 ms
+Warp time: 7.053856 ms
+Partition time: 3.056896 ms
+Thread time: 2.342944 ms
+Warp time: 7.325504 ms
+Partition time: 3.047616 ms
+Thread time: 2.415296 ms
+Warp time: 7.595328 ms
+Partition time: 3.032416 ms
+Thread time: 2.470592 ms
+Warp time: 7.903904 ms
+Partition time: 3.052736 ms
+Thread time: 2.470464 ms
+Warp time: 7.898656 ms
+Partition time: 3.048448 ms
+Thread time: 2.470528 ms
+Warp time: 7.898464 ms
+Contains query average: 13.274
+Filename: bimodal_32_10_8192_500.csv
+Running cold run...
+Partition time: 6.452288 ms
+Thread time: 4.129056 ms
+Warp time: 5.718368 ms
+Running hot run...
+Partition time: 2.396800 ms
+Thread time: 4.118688 ms
+Warp time: 5.749504 ms
+Partition time: 2.368352 ms
+Thread time: 4.303744 ms
+Warp time: 6.080160 ms
+Partition time: 2.382176 ms
+Thread time: 4.316768 ms
+Warp time: 6.416224 ms
+Partition time: 2.382144 ms
+Thread time: 4.494368 ms
+Warp time: 6.429696 ms
+Partition time: 2.381248 ms
+Thread time: 4.493792 ms
+Warp time: 6.425760 ms
+Partition time: 2.376576 ms
+Thread time: 4.494016 ms
+Warp time: 6.429536 ms
+Contains query average: 13.215
+Filename: bimodal_64_20_8192_500.csv
+Running cold run...
+Partition time: 5.782688 ms
+Thread time: 3.630240 ms
+Warp time: 22.769855 ms
+Running hot run...
+Partition time: 1.640640 ms
+Thread time: 3.622080 ms
+Warp time: 23.821377 ms
+Partition time: 1.652640 ms
+Thread time: 3.600384 ms
+Warp time: 23.820192 ms
+Partition time: 1.650528 ms
+Thread time: 3.621984 ms
+Warp time: 23.685087 ms
+Partition time: 1.648928 ms
+Thread time: 3.611072 ms
+Warp time: 23.819967 ms
+Partition time: 1.647488 ms
+Thread time: 3.622560 ms
+Warp time: 23.689600 ms
+Partition time: 1.659328 ms
+Thread time: 3.621824 ms
+Warp time: 23.817856 ms
+Contains query average: 29.09
+Filename: bimodal_16_5_65536_2000.csv
+Running cold run...
+Partition time: 4.672448 ms
+Thread time: 0.417536 ms
+Warp time: 9.348320 ms
+Running hot run...
+Partition time: 0.531520 ms
+Thread time: 0.399232 ms
+Warp time: 9.400000 ms
+Partition time: 0.526336 ms
+Thread time: 0.400736 ms
+Warp time: 9.385248 ms
+Partition time: 0.527520 ms
+Thread time: 0.400960 ms
+Warp time: 9.948480 ms
+Partition time: 0.537376 ms
+Thread time: 0.425920 ms
+Warp time: 10.584960 ms
+Partition time: 0.529120 ms
+Thread time: 0.426368 ms
+Warp time: 10.505248 ms
+Partition time: 0.531200 ms
+Thread time: 0.423712 ms
+Warp time: 10.503968 ms
+Contains query average: 11.184
+Filename: bimodal_32_10_65536_2000.csv
+Running cold run...
+Partition time: 4.578592 ms
+Thread time: 0.868800 ms
+Warp time: 9.240000 ms
+Running hot run...
+Partition time: 0.501984 ms
+Thread time: 0.850784 ms
+Warp time: 9.277536 ms
+Partition time: 0.508384 ms
+Thread time: 0.853376 ms
+Warp time: 9.318400 ms
+Partition time: 0.508480 ms
+Thread time: 0.855488 ms
+Warp time: 10.176704 ms
+Partition time: 0.512992 ms
+Thread time: 0.936672 ms
+Warp time: 10.360832 ms
+Partition time: 0.513152 ms
+Thread time: 0.933664 ms
+Warp time: 10.385952 ms
+Partition time: 0.515904 ms
+Thread time: 0.934208 ms
+Warp time: 10.361184 ms
+Contains query average: 11.587
+Filename: bimodal_64_20_65536_2000.csv
+Running cold run...
+Partition time: 4.563776 ms
+Thread time: 1.280704 ms
+Warp time: 34.409794 ms
+Running hot run...
+Partition time: 0.463072 ms
+Thread time: 1.283552 ms
+Warp time: 33.782784 ms
+Partition time: 0.463552 ms
+Thread time: 1.240352 ms
+Warp time: 33.416065 ms
+Partition time: 0.464960 ms
+Thread time: 1.306496 ms
+Warp time: 33.218910 ms
+Partition time: 0.462720 ms
+Thread time: 1.172672 ms
+Warp time: 33.147137 ms
+Partition time: 0.461760 ms
+Thread time: 1.360160 ms
+Warp time: 32.935871 ms
+Partition time: 0.462272 ms
+Thread time: 1.082112 ms
+Warp time: 32.964993 ms
+Contains query average: 34.882
+Filename: fb_comments.csv
+Running cold run...
+Partition time: 5.131776 ms
+Thread time: 1.063488 ms
+Warp time: 21.394976 ms
+Running hot run...
+Partition time: 1.025792 ms
+Thread time: 1.010176 ms
+Warp time: 20.552671 ms
+Partition time: 1.021536 ms
+Thread time: 1.001984 ms
+Warp time: 20.363745 ms
+Partition time: 1.005120 ms
+Thread time: 0.996992 ms
+Warp time: 20.214945 ms
+Partition time: 1.000896 ms
+Thread time: 0.993472 ms
+Warp time: 20.134785 ms
+Partition time: 1.022848 ms
+Thread time: 0.991840 ms
+Warp time: 20.022272 ms
+Partition time: 1.009920 ms
+Thread time: 0.987648 ms
+Warp time: 19.998240 ms
+Contains query average: 22.205
+Filename: fb_posts.csv
+Running cold run...
+Partition time: 5.543872 ms
+Thread time: 1.440736 ms
+Warp time: 22.597313 ms
+Running hot run...
+Partition time: 1.458560 ms
+Thread time: 1.394720 ms
+Warp time: 21.992256 ms
+Partition time: 1.454528 ms
+Thread time: 1.387872 ms
+Warp time: 21.783487 ms
+Partition time: 1.455680 ms
+Thread time: 1.387264 ms
+Warp time: 21.699583 ms
+Partition time: 1.459584 ms
+Thread time: 1.383232 ms
+Warp time: 21.567104 ms
+Partition time: 1.451136 ms
+Thread time: 1.378240 ms
+Warp time: 21.535360 ms
+Partition time: 1.463264 ms
+Thread time: 1.378592 ms
+Warp time: 21.536863 ms
+Contains query average: 24.518
+Filename: reddit_utf8.csv
+Running cold run...
+Partition time: 5.180480 ms
+Thread time: 1.724768 ms
+Warp time: 20.883425 ms
+Running hot run...
+Partition time: 1.034816 ms
+Thread time: 1.665952 ms
+Warp time: 20.191328 ms
+Partition time: 1.029088 ms
+Thread time: 1.664384 ms
+Warp time: 20.187328 ms
+Partition time: 1.035872 ms
+Thread time: 1.660064 ms
+Warp time: 20.171583 ms
+Partition time: 1.038784 ms
+Thread time: 1.664064 ms
+Warp time: 20.146175 ms
+Partition time: 1.033632 ms
+Thread time: 1.658336 ms
+Warp time: 20.105440 ms
+Partition time: 1.034496 ms
+Thread time: 1.656448 ms
+Warp time: 20.101824 ms
+Contains query average: 22.891
+Filename: twitter_utf8.csv
+Running cold run...
+Partition time: 6.255872 ms
+Thread time: 4.153088 ms
+Warp time: 19.851839 ms
+Running hot run...
+Partition time: 2.315520 ms
+Thread time: 4.168128 ms
+Warp time: 19.347391 ms
+Partition time: 2.307072 ms
+Thread time: 4.096352 ms
+Warp time: 19.246656 ms
+Partition time: 2.307008 ms
+Thread time: 4.103040 ms
+Warp time: 19.201344 ms
+Partition time: 2.316256 ms
+Thread time: 4.102304 ms
+Warp time: 19.193312 ms
+Partition time: 2.321024 ms
+Thread time: 4.061600 ms
+Warp time: 19.178976 ms
+Partition time: 2.314336 ms
+Thread time: 4.058752 ms
+Warp time: 19.044577 ms
+Contains query average: 25.631
+Filename: amazon_arts_and_crafts.csv
+Running cold run...
+Partition time: 5.309120 ms
+Thread time: 1.453024 ms
+Warp time: 19.915169 ms
+Running hot run...
+Partition time: 1.139168 ms
+Thread time: 1.385984 ms
+Warp time: 19.126207 ms
+Partition time: 1.154304 ms
+Thread time: 1.378464 ms
+Warp time: 18.951168 ms
+Partition time: 1.149216 ms
+Thread time: 1.375072 ms
+Warp time: 18.864960 ms
+Partition time: 1.146016 ms
+Thread time: 1.373792 ms
+Warp time: 18.849567 ms
+Partition time: 1.134976 ms
+Thread time: 1.372352 ms
+Warp time: 18.765535 ms
+Partition time: 1.158208 ms
+Thread time: 1.367712 ms
+Warp time: 18.721792 ms
+Contains query average: 21.406
+Filename: yelp_reviews.csv
+Running cold run...
+Partition time: 4.406976 ms
+Thread time: 0.051328 ms
+Warp time: 17.490496 ms
+Running hot run...
+Partition time: 0.332352 ms
+Thread time: 0.033760 ms
+Warp time: 17.092993 ms
+Partition time: 0.332672 ms
+Thread time: 0.033504 ms
+Warp time: 17.053408 ms
+Partition time: 0.324928 ms
+Thread time: 0.032544 ms
+Warp time: 17.057247 ms
+Partition time: 0.327168 ms
+Thread time: 0.032800 ms
+Warp time: 17.055616 ms
+Partition time: 0.328160 ms
+Thread time: 0.032992 ms
+Warp time: 17.058111 ms
+Partition time: 0.329472 ms
+Thread time: 0.033792 ms
+Warp time: 17.056000 ms
+Contains query average: 17.466
+Filename: github_commits.csv
+Running cold run...
+Partition time: 4.503840 ms
+Thread time: 0.338880 ms
+Warp time: 17.281343 ms
+Running hot run...
+Partition time: 0.442016 ms
+Thread time: 0.320992 ms
+Warp time: 17.743361 ms
+Partition time: 0.447328 ms
+Thread time: 0.324576 ms
+Warp time: 18.177183 ms
+Partition time: 0.434784 ms
+Thread time: 0.325024 ms
+Warp time: 18.229216 ms
+Partition time: 0.439552 ms
+Thread time: 0.322816 ms
+Warp time: 18.259808 ms
+Partition time: 0.436160 ms
+Thread time: 0.324896 ms
+Warp time: 18.367264 ms
+Partition time: 0.445056 ms
+Thread time: 0.325056 ms
+Warp time: 18.305569 ms
+Contains query average: 19.084
+Filename: common_crawl_urls.csv
+Running cold run...
+Partition time: 5.670368 ms
+Thread time: 3.675808 ms
+Warp time: 17.492737 ms
+Running hot run...
+Partition time: 1.711136 ms
+Thread time: 3.654464 ms
+Warp time: 17.223616 ms
+Partition time: 1.709536 ms
+Thread time: 3.634400 ms
+Warp time: 17.239552 ms
+Partition time: 1.707712 ms
+Thread time: 3.640960 ms
+Warp time: 17.241695 ms
+Partition time: 1.712160 ms
+Thread time: 3.636192 ms
+Warp time: 17.239616 ms
+Partition time: 1.707616 ms
+Thread time: 3.656384 ms
+Warp time: 17.224352 ms
+Partition time: 1.707776 ms
+Thread time: 3.635808 ms
+Warp time: 17.218208 ms
+Contains query average: 22.624

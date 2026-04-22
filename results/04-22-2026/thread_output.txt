@@ -1,0 +1,44 @@
+Filename: skew_16.csv
+Contains query average: 295.24
+Filename: skew_32.csv
+Contains query average: 249.57
+Filename: skew_64.csv
+Contains query average: 189.96
+Filename: uniform_dist_16_128.csv
+Contains query average: 15.188
+Filename: normal_16_128.csv
+Contains query average: 14.759
+Filename: bimodal_16_5_512_100.csv
+Contains query average: 46.993
+Filename: bimodal_32_10_512_100.csv
+Contains query average: 29.256
+Filename: bimodal_64_20_512_100.csv
+Contains query average: 20.832
+Filename: bimodal_16_5_8192_500.csv
+Contains query average: 213.22
+Filename: bimodal_32_10_8192_500.csv
+Contains query average: 168.15
+Filename: bimodal_64_20_8192_500.csv
+Contains query average: 121.17
+Filename: bimodal_16_5_65536_2000.csv
+Contains query average: 286.55
+Filename: bimodal_32_10_65536_2000.csv
+Contains query average: 273.14
+Filename: bimodal_64_20_65536_2000.csv
+Contains query average: 255.51
+Filename: fb_comments.csv
+Contains query average: 51.081
+Filename: fb_posts.csv
+Contains query average: 25.233
+Filename: reddit_utf8.csv
+Contains query average: 56.051
+Filename: twitter_utf8.csv
+Contains query average: 16.902
+Filename: amazon_arts_and_crafts.csv
+Contains query average: 40.9
+Filename: yelp_reviews.csv
+Contains query average: 36.136
+Filename: github_commits.csv
+Contains query average: 144.38
+Filename: common_crawl_urls.csv
+Contains query average: 22.582

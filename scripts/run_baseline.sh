@@ -17,5 +17,6 @@
 ../build/contains_baseline reddit_utf8.csv
 ../build/contains_baseline twitter_utf8.csv
 ../build/contains_baseline amazon_arts_and_crafts.csv
+../build/contains_baseline yelp_reviews.csv
 ../build/contains_baseline github_commits.csv
 ../build/contains_baseline common_crawl_urls.csv

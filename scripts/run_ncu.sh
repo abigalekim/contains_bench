@@ -1,0 +1,23 @@
+export PATH=~/micromamba/envs/cudf_dev/NVIDIA-Nsight-Compute-2026.1:$PATH
+ncu -o ../profiles/skew_32 ../build/contains_bench skew_32.csv
+ncu -o ../profiles/skew_16 ../build/contains_bench skew_16.csv
+ncu -o ../profiles/skew_64 ../build/contains_bench skew_64.csv
+ncu -o ../profiles/uniform ../build/contains_bench uniform_dist_16_128.csv
+ncu -o ../profiles/normal ../build/contains_bench normal_16_128.csv
+ncu -o ../profiles/bimodal_16_5_512_100 ../build/contains_bench bimodal_16_5_512_100.csv
+ncu -o ../profiles/bimodal_32_10_512_100 ../build/contains_bench bimodal_32_10_512_100.csv
+ncu -o ../profiles/bimodal_64_20_512_100 ../build/contains_bench bimodal_64_20_512_100.csv
+ncu -o ../profiles/bimodal_16_5_8192_500 ../build/contains_bench bimodal_16_5_8192_500.csv
+ncu -o ../profiles/bimodal_32_10_8192_500 ../build/contains_bench bimodal_32_10_8192_500.csv
+ncu -o ../profiles/bimodal_64_20_8192_500 ../build/contains_bench bimodal_64_20_8192_500.csv
+ncu -o ../profiles/bimodal_16_5_65536_2000 ../build/contains_bench bimodal_16_5_65536_2000.csv  
+ncu -o ../profiles/bimodal_bimodal_32_10_65536_2000 ../build/contains_bench bimodal_32_10_65536_2000.csv
+ncu -o ../profiles/bimodal_bimodal_64_20_65536_2000 ../build/contains_bench bimodal_64_20_65536_2000.csv
+ncu -o ../profiles/fb_comments ../build/contains_bench fb_comments.csv
+ncu -o ../profiles/fb_posts ../build/contains_bench fb_posts.csv
+ncu -o ../profiles/reddit ../build/contains_bench reddit_utf8.csv
+ncu -o ../profiles/twitter ../build/contains_bench twitter_utf8.csv
+ncu -o ../profiles/amazon_arts_and_crafts ../build/contains_bench amazon_arts_and_crafts.csv
+ncu -o ../profiles/yelp ../build/contains_bench yelp_reviews.csv
+ncu -o ../profiles/github ../build/contains_bench github_commits.csv
+ncu -o ../profiles/common_urls ../build/contains_bench common_crawl_urls.csv

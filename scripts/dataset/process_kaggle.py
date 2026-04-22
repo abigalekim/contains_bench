@@ -11,3 +11,6 @@ print("Path to dataset files:", path)
 
 path = kagglehub.dataset_download("smagnan/1-million-reddit-comments-from-40-subreddits")
 print("Path to dataset files:", path)
+
+path = kagglehub.dataset_download("yelp-dataset/yelp-dataset")
+print("Path to dataset files:", path)

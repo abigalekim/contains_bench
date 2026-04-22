@@ -17,5 +17,6 @@
 ../build/contains_bench reddit_utf8.csv
 ../build/contains_bench twitter_utf8.csv
 ../build/contains_bench amazon_arts_and_crafts.csv
+../build/contains_bench yelp_reviews.csv
 ../build/contains_bench github_commits.csv
 ../build/contains_bench common_crawl_urls.csv

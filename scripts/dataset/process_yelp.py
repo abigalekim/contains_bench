@@ -3,8 +3,8 @@ import csv
 import matplotlib.pyplot as plt
 
 # Yelp dataset is typically in JSON format (one JSON object per line)
-file = "/mnt/wiscdb/abigale/yelp_academic_dataset_review.json"
-output_file = "/mnt/wiscdb/abigale/string_dataset_csvs/yelp_reviews.csv"
+file = "/home/akkim7/yelp_academic_dataset_review.json"
+output_file = "/home/akkim7/string_datasets/yelp_reviews.csv"
 lengths = []
 
 GIGABYTE = 1073741824
@@ -26,28 +26,28 @@ print(f"Max length: {max(lengths)}")
 print(f"Median length: {sorted(lengths)[len(lengths)//2]}")
 
 # Write to CSV with 5GB upper bound
-#with open(output_file, "w", encoding="utf-8", newline='') as f_out:
-#    writer = csv.writer(f_out)
-#    total_bytes = 0
-#    total_len = 5 * GIGABYTE
-#    gb_written = 0
-#    row_idx = 0
-#    
-#    while total_bytes < total_len:
-#        message = reviews[row_idx]
-#        row_idx += 1
-#        if row_idx == len(reviews):
-#            row_idx = 0
-#        
-#        total_bytes += len(message)
-#        writer.writerow([message.replace("\n", "")])
-#        
-#        current_gb = total_bytes // GIGABYTE
-#        if current_gb > gb_written:
-#            gb_written = current_gb
-#            print(f"Written {gb_written} GB of data ({total_bytes:,} bytes)")
-#
-#print("Done! CSV file written")
+with open(output_file, "w", encoding="utf-8", newline='') as f_out:
+    writer = csv.writer(f_out)
+    total_bytes = 0
+    total_len = 3 * GIGABYTE
+    gb_written = 0
+    row_idx = 0
+    
+    while total_bytes < total_len:
+        message = reviews[row_idx]
+        row_idx += 1
+        if row_idx == len(reviews):
+            row_idx = 0
+        
+        total_bytes += len(message)
+        writer.writerow([message.replace("\n", "")])
+        
+        current_gb = total_bytes // GIGABYTE
+        if current_gb > gb_written:
+            gb_written = current_gb
+            print(f"Written {gb_written} GB of data ({total_bytes:,} bytes)")
+
+print("Done! CSV file written")
 #
 ## Plot histogram
 #plt.figure(figsize=(12, 6))

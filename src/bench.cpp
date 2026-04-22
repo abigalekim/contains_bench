@@ -56,26 +56,26 @@ int main(int argc, char** argv) {
 
   {
     // cold run
-    std::cout << "Running cold run...\n";
-    std::unique_ptr<cudf::column> result = cudf::strings::contains(strings_col, search_scalar);
+    //std::cout << "Running cold run...\n";
+    std::unique_ptr<cudf::column> result = cudf::strings::contains_heterogeneous(strings_col, search_scalar);
     cudaDeviceSynchronize();
 
-    std::cout << "Running hot run...\n";
-    auto start_time = std::chrono::high_resolution_clock::now();
-    std::unique_ptr<cudf::column> result1 = cudf::strings::contains(strings_col, search_scalar);
-    cudaDeviceSynchronize();
-    auto end_time = std::chrono::high_resolution_clock::now();
+    //std::cout << "Running hot run...\n";
+    //auto start_time = std::chrono::high_resolution_clock::now();
+    //std::unique_ptr<cudf::column> result1 = cudf::strings::contains(strings_col, search_scalar);
+    //cudaDeviceSynchronize();
+    //auto end_time = std::chrono::high_resolution_clock::now();
   }
 
-  float milliseconds_sum = 0.0f;
-  for (int i = 0; i < 5; ++i) {
-    auto start_time = std::chrono::high_resolution_clock::now();
-    std::unique_ptr<cudf::column> result = cudf::strings::contains(strings_col, search_scalar);
-    cudaDeviceSynchronize();
-    auto end_time = std::chrono::high_resolution_clock::now();
-    auto duration = std::chrono::duration_cast<std::chrono::microseconds>(end_time - start_time);
-    milliseconds_sum += (duration.count() / 1000.0);
-  }
-  std::cout << "Contains query average: " << std::setprecision(5) << milliseconds_sum/5.0f << std::endl;
+  //float milliseconds_sum = 0.0f;
+  //for (int i = 0; i < 5; ++i) {
+  //  auto start_time = std::chrono::high_resolution_clock::now();
+  //  std::unique_ptr<cudf::column> result = cudf::strings::contains(strings_col, search_scalar);
+  //  cudaDeviceSynchronize();
+  //  auto end_time = std::chrono::high_resolution_clock::now();
+  //  auto duration = std::chrono::duration_cast<std::chrono::microseconds>(end_time - start_time);
+  //  milliseconds_sum += (duration.count() / 1000.0);
+  //}
+  //std::cout << "Contains query average: " << std::setprecision(5) << milliseconds_sum/5.0f << std::endl;
   return 0;
 }
