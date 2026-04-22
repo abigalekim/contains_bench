@@ -34,7 +34,7 @@ int main(int argc, char** argv) {
   }
 
   std::string request = "Harum Hic Ex At";
-  std::string csv_filename = "/home/ubuntu/string_datasets/" + std::string(argv[1]);
+  std::string csv_filename = "/home/akkim7/string_datasets/" + std::string(argv[1]);
   std::vector<std::string> col_names = {"value"};
 
   cudf::io::csv_reader_options options =
