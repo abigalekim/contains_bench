@@ -16,7 +16,7 @@ def process_csv(input_filename, index, output_filename):
   print(len(inputrows))
 
   total_bytes = 0
-  total_len = 3 * GIGABYTE
+  total_len = 10 * GIGABYTE
   gb_written = 0
   row_idx = 0
 

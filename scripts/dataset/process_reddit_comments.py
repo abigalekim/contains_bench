@@ -14,7 +14,7 @@ with open(input_path, "r", encoding="latin-1") as f_in:
     writer = csv.writer(f_out)
       
     total_bytes = 0
-    total_len = 3 * GIGABYTE
+    total_len = 10 * GIGABYTE
     gb_written = 0
     row_idx = 0
 

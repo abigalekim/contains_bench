@@ -30,7 +30,7 @@ if __name__ == '__main__':
   output_csv = csv.writer(output_file)
 
   total_bytes = 0
-  total_len = 3 * GIGABYTE
+  total_len = 10 * GIGABYTE
   gb_written = 0
   print("Starting writing data with " + option_str + " dataset with string length " + str(string_size))
   while total_bytes < total_len:

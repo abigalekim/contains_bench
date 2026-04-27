@@ -62,7 +62,7 @@ print("Writing to CSV...")
 with open(output_file, "w", encoding="utf-8", newline='') as f_out:
     writer = csv.writer(f_out)
     total_bytes = 0
-    total_len = 3 * GIGABYTE
+    total_len = 10 * GIGABYTE
     gb_written = 0
     row_idx = 0
     

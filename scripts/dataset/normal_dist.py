@@ -24,7 +24,7 @@ if __name__ == '__main__':
   output_csv = csv.writer(output_file)
 
   total_bytes = 0
-  total_len = 3 * GIGABYTE
+  total_len = 10 * GIGABYTE
   gb_written = 0
   mean = (min_size + max_size) / 2
   std_dev = (max_size - min_size) / 4
