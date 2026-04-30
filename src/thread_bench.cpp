@@ -15,7 +15,7 @@
 float run_benchmark(std::string filename) {
   // Create pool with much smaller initial allocation and reasonable max
   uint64_t initial_pool_size = 0UL;  // Start with 1GB
-  uint64_t max_pool_size = 38UL * 1024UL * 1024UL * 1024UL;
+  uint64_t max_pool_size = 70UL * 1024UL * 1024UL * 1024UL; 
   
   auto cuda_mr = std::make_shared<rmm::mr::cuda_memory_resource>();
   auto pool_mr = std::make_shared<rmm::mr::pool_memory_resource<rmm::mr::cuda_memory_resource>>(
