@@ -1,0 +1,50 @@
+Filename: yelp_reviews.csv
+Method: thread
+==PROF== Connected to process 1577657 (/home/akkim7/contains_bench/build/contains_ncu)
+==PROF== Profiling "transform_kernel": 0%....50%....100% - 10 passes
+==PROF== Profiling "transform_kernel": 0%....50%....100% - 10 passes
+==PROF== Disconnected from process 1577657
+[1577657] contains_ncu@127.0.0.1
+  void transform_kernel<policy_hub<1, tuple<counting_iterator<int, use_default, use_default, use_default>>>::policy1000, int, __detail::__return_type_wrapper<int, unnamed>::replace_character_parallel(const strings_column_view &, const string_view &, const string_view &, int, cuda_stream_view, cccl_async_resource_ref<basic_resource_ref<1, device_accessible>>)::[lambda(int) (instance 1)]>, int *, counting_iterator<int, use_default, use_default, use_default>>(T2, int, T3, T4, kernel_arg<T5>...) (12308, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 9.0
+    Section: GPU Speed Of Light Throughput
+    ----------------------- ----------- ------------
+    Metric Name             Metric Unit Metric Value
+    ----------------------- ----------- ------------
+    DRAM Frequency                  Ghz         1.59
+    SM Frequency                    Ghz         1.75
+    Elapsed Cycles                cycle     47216794
+    Memory Throughput                 %        62.26
+    DRAM Throughput                   %        23.66
+    Duration                         ms        26.91
+    L1/TEX Cache Throughput           %        63.09
+    L2 Cache Throughput               %        20.53
+    SM Active Cycles              cycle  46599479.62
+    Compute (SM) Throughput           %        48.80
+    ----------------------- ----------- ------------
+
+    OPT   Memory is more heavily utilized than Compute: Look at the Memory Workload Analysis section to identify the L1 
+          bottleneck. Check memory replay (coalescing) metrics to make sure you're efficiently utilizing the bytes      
+          transferred. Also consider whether it is possible to do more work per memory access (kernel fusion) or        
+          whether there are values you can (re)compute.                                                                 
+
+  void transform_kernel<policy_hub<1, tuple<counting_iterator<int, use_default, use_default, use_default>>>::policy1000, int, unique_ptr<column, default_delete<column>> unnamed>::contains_fn<contains_thread(const strings_column_view &, const string_scalar &, cuda_stream_view, cccl_async_resource_ref<basic_resource_ref<1, device_accessible>>)::[lambda(string_view, string_view) (instance 1)]>(const strings_column_view &, const string_scalar &, T1, cuda_stream_view, cccl_async_resource_ref<basic_resource_ref<1, device_accessible>>)::[lambda(int) (instance 1)], bool *, counting_iterator<int, use_default, use_default, use_default>>(T2, int, T3, T4, kernel_arg<T5>...) (12308, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 9.0
+    Section: GPU Speed Of Light Throughput
+    ----------------------- ----------- ------------
+    Metric Name             Metric Unit Metric Value
+    ----------------------- ----------- ------------
+    DRAM Frequency                  Ghz         1.59
+    SM Frequency                    Ghz         1.75
+    Elapsed Cycles                cycle     88014976
+    Memory Throughput                 %        40.78
+    DRAM Throughput                   %        11.10
+    Duration                         ms        50.16
+    L1/TEX Cache Throughput           %        41.57
+    L2 Cache Throughput               %         9.69
+    SM Active Cycles              cycle  86348123.48
+    Compute (SM) Throughput           %        87.52
+    ----------------------- ----------- ------------
+
+    INF   This workload is utilizing greater than 80.0% of the available compute or memory performance of this device.  
+          To further improve performance, work will likely need to be shifted from the most utilized to another unit.   
+          Start by analyzing workloads in the Compute Workload Analysis section.                                        
+

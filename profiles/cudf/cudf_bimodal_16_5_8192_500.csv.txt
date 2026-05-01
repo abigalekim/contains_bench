@@ -1,0 +1,29 @@
+Filename: bimodal_16_5_8192_500.csv
+Method: cudf
+==PROF== Connected to process 1576268 (/home/akkim7/contains_bench/build/contains_ncu)
+==PROF== Profiling "transform_kernel": 0%
+==WARNING== Backing up device memory in system memory. Kernel replay might be slow. Consider using "--replay-mode application" to avoid memory save-and-restore.
+....50%....100% - 10 passes
+==PROF== Disconnected from process 1576268
+[1576268] contains_ncu@127.0.0.1
+  void transform_kernel<policy_hub<1, tuple<counting_iterator<int, use_default, use_default, use_default>>>::policy1000, int, unique_ptr<column, default_delete<column>> unnamed>::contains_fn<contains(const strings_column_view &, const string_scalar &, cuda_stream_view, cccl_async_resource_ref<basic_resource_ref<1, device_accessible>>)::[lambda(string_view, string_view) (instance 1)]>(const strings_column_view &, const string_scalar &, T1, cuda_stream_view, cccl_async_resource_ref<basic_resource_ref<1, device_accessible>>)::[lambda(int) (instance 1)], bool *, counting_iterator<int, use_default, use_default, use_default>>(T2, int, T3, T4, kernel_arg<T5>...) (123911, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 9.0
+    Section: GPU Speed Of Light Throughput
+    ----------------------- ----------- ------------
+    Metric Name             Metric Unit Metric Value
+    ----------------------- ----------- ------------
+    DRAM Frequency                  Ghz         1.59
+    SM Frequency                    Ghz         1.75
+    Elapsed Cycles                cycle    480691734
+    Memory Throughput                 %        26.91
+    DRAM Throughput                   %         2.29
+    Duration                         ms       273.90
+    L1/TEX Cache Throughput           %        27.14
+    L2 Cache Throughput               %         1.92
+    SM Active Cycles              cycle 476612671.47
+    Compute (SM) Throughput           %        86.70
+    ----------------------- ----------- ------------
+
+    INF   This workload is utilizing greater than 80.0% of the available compute or memory performance of this device.  
+          To further improve performance, work will likely need to be shifted from the most utilized to another unit.   
+          Start by analyzing workloads in the Compute Workload Analysis section.                                        
+

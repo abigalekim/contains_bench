@@ -1,0 +1,12 @@
+python3 dataset/generate_skew_distr.py 16 20000 99.9
+python3 dataset/generate_skew_distr.py 16 20000 99.5
+python3 dataset/generate_skew_distr.py 16 20000 99
+python3 dataset/generate_skew_distr.py 16 20000 95
+python3 dataset/generate_skew_distr.py 16 20000 90
+python3 dataset/generate_skew_distr.py 16 20000 75
+python3 dataset/generate_skew_distr.py 16 20000 50
+python3 dataset/generate_skew_distr.py 16 20000 25
+python3 dataset/generate_skew_distr.py 16 20000 10
+python3 dataset/generate_skew_distr.py 16 20000 5
+python3 dataset/generate_skew_distr.py 16 20000 0.5
+python3 dataset/generate_skew_distr.py 16 20000 0.1

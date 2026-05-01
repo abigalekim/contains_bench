@@ -1,0 +1,29 @@
+Filename: skew_32.csv
+Method: cudf
+==PROF== Connected to process 1575969 (/home/akkim7/contains_bench/build/contains_ncu)
+==PROF== Profiling "contains_warp_parallel_fn": 0%
+==WARNING== Backing up device memory in system memory. Kernel replay might be slow. Consider using "--replay-mode application" to avoid memory save-and-restore.
+....50%....100% - 10 passes
+==PROF== Disconnected from process 1575969
+[1575969] contains_ncu@127.0.0.1
+  unnamed>::contains_warp_parallel_fn(column_device_view, string_view, bool *) (13648507, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 9.0
+    Section: GPU Speed Of Light Throughput
+    ----------------------- ----------- ------------
+    Metric Name             Metric Unit Metric Value
+    ----------------------- ----------- ------------
+    DRAM Frequency                  Ghz         1.59
+    SM Frequency                    Ghz         1.75
+    Elapsed Cycles                cycle     85597395
+    Memory Throughput                 %        28.56
+    DRAM Throughput                   %        11.82
+    Duration                         ms        48.78
+    L1/TEX Cache Throughput           %        28.58
+    L2 Cache Throughput               %        11.87
+    SM Active Cycles              cycle  85562275.99
+    Compute (SM) Throughput           %        77.34
+    ----------------------- ----------- ------------
+
+    OPT   Compute is more heavily utilized than Memory: Look at the Compute Workload Analysis section to see what the   
+          compute pipelines are spending their time doing. Also, consider whether any computation is redundant and      
+          could be reduced or moved to look-up tables.                                                                  
+
