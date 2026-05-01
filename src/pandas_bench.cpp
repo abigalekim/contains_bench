@@ -13,7 +13,7 @@ int main(int argc, char** argv) {
 
     std::cout << "Filename: " << std::string(argv[1]) << std::endl;
     
-    std::string csv_filename = "/mnt/wiscdb/abigale/string_dataset_csvs/" + std::string(argv[1]);
+    std::string csv_filename = "/home/akkim7/string_datasets/" + std::string(argv[1]);
     std::string request = "Harum Hic Ex At";
 
     // Initialize Python

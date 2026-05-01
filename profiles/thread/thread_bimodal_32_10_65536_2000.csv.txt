@@ -1,0 +1,49 @@
+Filename: bimodal_32_10_65536_2000.csv
+Method: thread
+==PROF== Connected to process 1577381 (/home/akkim7/contains_bench/build/contains_ncu)
+==PROF== Profiling "transform_kernel": 0%....50%....100% - 10 passes
+==PROF== Profiling "transform_kernel": 0%....50%....100% - 10 passes
+==PROF== Disconnected from process 1577381
+[1577381] contains_ncu@127.0.0.1
+  void transform_kernel<policy_hub<1, tuple<counting_iterator<int, use_default, use_default, use_default>>>::policy1000, int, __detail::__return_type_wrapper<int, unnamed>::replace_character_parallel(const strings_column_view &, const string_view &, const string_view &, int, cuda_stream_view, cccl_async_resource_ref<basic_resource_ref<1, device_accessible>>)::[lambda(int) (instance 1)]>, int *, counting_iterator<int, use_default, use_default, use_default>>(T2, int, T3, T4, kernel_arg<T5>...) (19452, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 9.0
+    Section: GPU Speed Of Light Throughput
+    ----------------------- ----------- ------------
+    Metric Name             Metric Unit Metric Value
+    ----------------------- ----------- ------------
+    DRAM Frequency                  Ghz         1.59
+    SM Frequency                    Ghz         1.75
+    Elapsed Cycles                cycle    179663477
+    Memory Throughput                 %        45.96
+    DRAM Throughput                   %         5.54
+    Duration                         ms       102.38
+    L1/TEX Cache Throughput           %        46.99
+    L2 Cache Throughput               %         4.76
+    SM Active Cycles              cycle 175700032.60
+    Compute (SM) Throughput           %        85.19
+    ----------------------- ----------- ------------
+
+    INF   This workload is utilizing greater than 80.0% of the available compute or memory performance of this device.  
+          To further improve performance, work will likely need to be shifted from the most utilized to another unit.   
+          Start by analyzing workloads in the Compute Workload Analysis section.                                        
+
+  void transform_kernel<policy_hub<1, tuple<counting_iterator<int, use_default, use_default, use_default>>>::policy1000, int, unique_ptr<column, default_delete<column>> unnamed>::contains_fn<contains_thread(const strings_column_view &, const string_scalar &, cuda_stream_view, cccl_async_resource_ref<basic_resource_ref<1, device_accessible>>)::[lambda(string_view, string_view) (instance 1)]>(const strings_column_view &, const string_scalar &, T1, cuda_stream_view, cccl_async_resource_ref<basic_resource_ref<1, device_accessible>>)::[lambda(int) (instance 1)], bool *, counting_iterator<int, use_default, use_default, use_default>>(T2, int, T3, T4, kernel_arg<T5>...) (19452, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 9.0
+    Section: GPU Speed Of Light Throughput
+    ----------------------- ----------- ------------
+    Metric Name             Metric Unit Metric Value
+    ----------------------- ----------- ------------
+    DRAM Frequency                  Ghz         1.59
+    SM Frequency                    Ghz         1.75
+    Elapsed Cycles                cycle    642723289
+    Memory Throughput                 %        25.06
+    DRAM Throughput                   %         1.49
+    Duration                         ms       366.23
+    L1/TEX Cache Throughput           %        26.27
+    L2 Cache Throughput               %         1.28
+    SM Active Cycles              cycle 613111709.01
+    Compute (SM) Throughput           %        80.93
+    ----------------------- ----------- ------------
+
+    INF   This workload is utilizing greater than 80.0% of the available compute or memory performance of this device.  
+          To further improve performance, work will likely need to be shifted from the most utilized to another unit.   
+          Start by analyzing workloads in the Compute Workload Analysis section.                                        
+

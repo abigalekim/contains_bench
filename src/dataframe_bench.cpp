@@ -24,7 +24,7 @@ int main(int argc, char** argv) {
   auto contains_fn = [&request](const unsigned long&, const std::string& val) -> bool {
     return val.find(request) != std::string::npos;
   };
-  std::string csv_filename = "/mnt/wiscdb/abigale/string_dataset_csvs/" + std::string(argv[1]);
+  std::string csv_filename = "/home/akkim7/string_datasets/" + std::string(argv[1]);
   std::vector<std::string> col_names = {"value"};
 
   StdDataFrame<unsigned long> df;

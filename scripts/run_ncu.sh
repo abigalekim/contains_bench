@@ -1,111 +1,115 @@
 export PATH=~/micromamba/envs/cudf_dev/NVIDIA-Nsight-Compute-2026.1:$PATH
-ncu --set full -o ../profiles/het_skew_32 ../build/contains_ncu skew_32.csv het
-ncu --set full -o ../profiles/het_skew_16 ../build/contains_ncu skew_16.csv het
-ncu --set full -o ../profiles/het_skew_64 ../build/contains_ncu skew_64.csv het
-ncu --set full -o ../profiles/het_uniform ../build/contains_ncu uniform_dist_16_128.csv het
-ncu --set full -o ../profiles/het_normal ../build/contains_ncu normal_16_128.csv het
-ncu --set full -o ../profiles/het_bimodal_16_5_512_100 ../build/contains_ncu bimodal_16_5_512_100.csv het
-ncu --set full -o ../profiles/het_bimodal_32_10_512_100 ../build/contains_ncu bimodal_32_10_512_100.csv het
-ncu --set full -o ../profiles/het_bimodal_64_20_512_100 ../build/contains_ncu bimodal_64_20_512_100.csv het
-ncu --set full -o ../profiles/het_bimodal_16_5_8192_500 ../build/contains_ncu bimodal_16_5_8192_500.csv het
-ncu --set full -o ../profiles/het_bimodal_32_10_8192_500 ../build/contains_ncu bimodal_32_10_8192_500.csv het
-ncu --set full -o ../profiles/het_bimodal_64_20_8192_500 ../build/contains_ncu bimodal_64_20_8192_500.csv het
-ncu --set full -o ../profiles/het_bimodal_16_5_65536_2000 ../build/contains_ncu bimodal_16_5_65536_2000.csv   het
-ncu --set full -o ../profiles/het_bimodal_bimodal_32_10_65536_2000 ../build/contains_ncu bimodal_32_10_65536_2000.csv het
-ncu --set full -o ../profiles/het_bimodal_bimodal_64_20_65536_2000 ../build/contains_ncu bimodal_64_20_65536_2000.csv het
-ncu --set full -o ../profiles/het_fb_comments ../build/contains_ncu fb_comments.csv het
-ncu --set full -o ../profiles/het_fb_posts ../build/contains_ncu fb_posts.csv het
-ncu --set full -o ../profiles/het_reddit ../build/contains_ncu reddit_utf8.csv het
-ncu --set full -o ../profiles/het_twitter ../build/contains_ncu twitter_utf8.csv het
-ncu --set full -o ../profiles/het_amazon_arts_and_crafts ../build/contains_ncu amazon_arts_and_crafts.csv het
-ncu --set full -o ../profiles/het_yelp ../build/contains_ncu yelp_reviews.csv het
-ncu --set full -o ../profiles/het_github ../build/contains_ncu github_commits.csv het
-ncu --set full -o ../profiles/het_common_urls ../build/contains_ncu common_crawl_urls.csv het
-ncu --set full -o ../profiles/cudf_skew_32 ../build/contains_ncu skew_32.csv cudf
-ncu --set full -o ../profiles/cudf_skew_16 ../build/contains_ncu skew_16.csv cudf
-ncu --set full -o ../profiles/cudf_skew_64 ../build/contains_ncu skew_64.csv cudf
-ncu --set full -o ../profiles/cudf_uniform ../build/contains_ncu uniform_dist_16_128.csv cudf
-ncu --set full -o ../profiles/cudf_normal ../build/contains_ncu normal_16_128.csv cudf
-ncu --set full -o ../profiles/cudf_bimodal_16_5_512_100 ../build/contains_ncu bimodal_16_5_512_100.csv cudf
-ncu --set full -o ../profiles/cudf_bimodal_32_10_512_100 ../build/contains_ncu bimodal_32_10_512_100.csv cudf
-ncu --set full -o ../profiles/cudf_bimodal_64_20_512_100 ../build/contains_ncu bimodal_64_20_512_100.csv cudf
-ncu --set full -o ../profiles/cudf_bimodal_16_5_8192_500 ../build/contains_ncu bimodal_16_5_8192_500.csv cudf
-ncu --set full -o ../profiles/cudf_bimodal_32_10_8192_500 ../build/contains_ncu bimodal_32_10_8192_500.csv cudf
-ncu --set full -o ../profiles/cudf_bimodal_64_20_8192_500 ../build/contains_ncu bimodal_64_20_8192_500.csv cudf
-ncu --set full -o ../profiles/cudf_bimodal_16_5_65536_2000 ../build/contains_ncu bimodal_16_5_65536_2000.csv   cudf
-ncu --set full -o ../profiles/cudf_bimodal_bimodal_32_10_65536_2000 ../build/contains_ncu bimodal_32_10_65536_2000.csv cudf
-ncu --set full -o ../profiles/cudf_bimodal_bimodal_64_20_65536_2000 ../build/contains_ncu bimodal_64_20_65536_2000.csv cudf
-ncu --set full -o ../profiles/cudf_fb_comments ../build/contains_ncu fb_comments.csv cudf
-ncu --set full -o ../profiles/cudf_fb_posts ../build/contains_ncu fb_posts.csv cudf
-ncu --set full -o ../profiles/cudf_reddit ../build/contains_ncu reddit_utf8.csv cudf
-ncu --set full -o ../profiles/cudf_twitter ../build/contains_ncu twitter_utf8.csv cudf
-ncu --set full -o ../profiles/cudf_amazon_arts_and_crafts ../build/contains_ncu amazon_arts_and_crafts.csv cudf
-ncu --set full -o ../profiles/cudf_yelp ../build/contains_ncu yelp_reviews.csv cudf
-ncu --set full -o ../profiles/cudf_github ../build/contains_ncu github_commits.csv cudf
-ncu --set full -o ../profiles/cudf_common_urls ../build/contains_ncu common_crawl_urls.csv cudf
-ncu --set full -o ../profiles/thread_skew_32 ../build/contains_ncu skew_32.csv thread
-ncu --set full -o ../profiles/thread_skew_16 ../build/contains_ncu skew_16.csv thread
-ncu --set full -o ../profiles/thread_skew_64 ../build/contains_ncu skew_64.csv thread
-ncu --set full -o ../profiles/thread_uniform ../build/contains_ncu uniform_dist_16_128.csv thread
-ncu --set full -o ../profiles/thread_normal ../build/contains_ncu normal_16_128.csv thread
-ncu --set full -o ../profiles/thread_bimodal_16_5_512_100 ../build/contains_ncu bimodal_16_5_512_100.csv thread
-ncu --set full -o ../profiles/thread_bimodal_32_10_512_100 ../build/contains_ncu bimodal_32_10_512_100.csv thread
-ncu --set full -o ../profiles/thread_bimodal_64_20_512_100 ../build/contains_ncu bimodal_64_20_512_100.csv thread
-ncu --set full -o ../profiles/thread_bimodal_16_5_8192_500 ../build/contains_ncu bimodal_16_5_8192_500.csv thread
-ncu --set full -o ../profiles/thread_bimodal_32_10_8192_500 ../build/contains_ncu bimodal_32_10_8192_500.csv thread
-ncu --set full -o ../profiles/thread_bimodal_64_20_8192_500 ../build/contains_ncu bimodal_64_20_8192_500.csv thread
-ncu --set full -o ../profiles/thread_bimodal_16_5_65536_2000 ../build/contains_ncu bimodal_16_5_65536_2000.csv   thread
-ncu --set full -o ../profiles/thread_bimodal_bimodal_32_10_65536_2000 ../build/contains_ncu bimodal_32_10_65536_2000.csv thread
-ncu --set full -o ../profiles/thread_bimodal_bimodal_64_20_65536_2000 ../build/contains_ncu bimodal_64_20_65536_2000.csv thread
-ncu --set full -o ../profiles/thread_fb_comments ../build/contains_ncu fb_comments.csv thread
-ncu --set full -o ../profiles/thread_fb_posts ../build/contains_ncu fb_posts.csv thread
-ncu --set full -o ../profiles/thread_reddit ../build/contains_ncu reddit_utf8.csv thread
-ncu --set full -o ../profiles/thread_twitter ../build/contains_ncu twitter_utf8.csv thread
-ncu --set full -o ../profiles/thread_amazon_arts_and_crafts ../build/contains_ncu amazon_arts_and_crafts.csv thread
-ncu --set full -o ../profiles/thread_yelp ../build/contains_ncu yelp_reviews.csv thread
-ncu --set full -o ../profiles/thread_github ../build/contains_ncu github_commits.csv thread
-ncu --set full -o ../profiles/thread_common_urls ../build/contains_ncu common_crawl_urls.csv thread
-ncu --set full -o ../profiles/warp_skew_32 ../build/contains_ncu skew_32.csv warp
-ncu --set full -o ../profiles/warp_skew_16 ../build/contains_ncu skew_16.csv warp
-ncu --set full -o ../profiles/warp_skew_64 ../build/contains_ncu skew_64.csv warp
-ncu --set full -o ../profiles/warp_uniform ../build/contains_ncu uniform_dist_16_128.csv warp
-ncu --set full -o ../profiles/warp_normal ../build/contains_ncu normal_16_128.csv warp
-ncu --set full -o ../profiles/warp_bimodal_16_5_512_100 ../build/contains_ncu bimodal_16_5_512_100.csv warp
-ncu --set full -o ../profiles/warp_bimodal_32_10_512_100 ../build/contains_ncu bimodal_32_10_512_100.csv warp
-ncu --set full -o ../profiles/warp_bimodal_64_20_512_100 ../build/contains_ncu bimodal_64_20_512_100.csv warp
-ncu --set full -o ../profiles/warp_bimodal_16_5_8192_500 ../build/contains_ncu bimodal_16_5_8192_500.csv warp
-ncu --set full -o ../profiles/warp_bimodal_32_10_8192_500 ../build/contains_ncu bimodal_32_10_8192_500.csv warp
-ncu --set full -o ../profiles/warp_bimodal_64_20_8192_500 ../build/contains_ncu bimodal_64_20_8192_500.csv warp
-ncu --set full -o ../profiles/warp_bimodal_16_5_65536_2000 ../build/contains_ncu bimodal_16_5_65536_2000.csv   warp
-ncu --set full -o ../profiles/warp_bimodal_bimodal_32_10_65536_2000 ../build/contains_ncu bimodal_32_10_65536_2000.csv warp
-ncu --set full -o ../profiles/warp_bimodal_bimodal_64_20_65536_2000 ../build/contains_ncu bimodal_64_20_65536_2000.csv warp
-ncu --set full -o ../profiles/warp_fb_comments ../build/contains_ncu fb_comments.csv warp
-ncu --set full -o ../profiles/warp_fb_posts ../build/contains_ncu fb_posts.csv warp
-ncu --set full -o ../profiles/warp_reddit ../build/contains_ncu reddit_utf8.csv warp
-ncu --set full -o ../profiles/warp_twitter ../build/contains_ncu twitter_utf8.csv warp
-ncu --set full -o ../profiles/warp_amazon_arts_and_crafts ../build/contains_ncu amazon_arts_and_crafts.csv warp
-ncu --set full -o ../profiles/warp_yelp ../build/contains_ncu yelp_reviews.csv warp
-ncu --set full -o ../profiles/warp_github ../build/contains_ncu github_commits.csv warp
-ncu --set full -o ../profiles/warp_common_urls ../build/contains_ncu common_crawl_urls.csv warp
-ncu --set full -o ../profiles/badhet_skew_32 ../build/contains_ncu skew_32.csv badhet
-ncu --set full -o ../profiles/badhet_skew_16 ../build/contains_ncu skew_16.csv badhet
-ncu --set full -o ../profiles/badhet_skew_64 ../build/contains_ncu skew_64.csv badhet
-ncu --set full -o ../profiles/badhet_uniform ../build/contains_ncu uniform_dist_16_128.csv badhet
-ncu --set full -o ../profiles/badhet_normal ../build/contains_ncu normal_16_128.csv badhet
-ncu --set full -o ../profiles/badhet_bimodal_16_5_512_100 ../build/contains_ncu bimodal_16_5_512_100.csv badhet
-ncu --set full -o ../profiles/badhet_bimodal_32_10_512_100 ../build/contains_ncu bimodal_32_10_512_100.csv badhet
-ncu --set full -o ../profiles/badhet_bimodal_64_20_512_100 ../build/contains_ncu bimodal_64_20_512_100.csv badhet
-ncu --set full -o ../profiles/badhet_bimodal_16_5_8192_500 ../build/contains_ncu bimodal_16_5_8192_500.csv badhet
-ncu --set full -o ../profiles/badhet_bimodal_32_10_8192_500 ../build/contains_ncu bimodal_32_10_8192_500.csv badhet
-ncu --set full -o ../profiles/badhet_bimodal_64_20_8192_500 ../build/contains_ncu bimodal_64_20_8192_500.csv badhet
-ncu --set full -o ../profiles/badhet_bimodal_16_5_65536_2000 ../build/contains_ncu bimodal_16_5_65536_2000.csv   badhet
-ncu --set full -o ../profiles/badhet_bimodal_bimodal_32_10_65536_2000 ../build/contains_ncu bimodal_32_10_65536_2000.csv badhet
-ncu --set full -o ../profiles/badhet_bimodal_bimodal_64_20_65536_2000 ../build/contains_ncu bimodal_64_20_65536_2000.csv badhet
-ncu --set full -o ../profiles/badhet_fb_comments ../build/contains_ncu fb_comments.csv badhet
-ncu --set full -o ../profiles/badhet_fb_posts ../build/contains_ncu fb_posts.csv badhet
-ncu --set full -o ../profiles/badhet_reddit ../build/contains_ncu reddit_utf8.csv badhet
-ncu --set full -o ../profiles/badhet_twitter ../build/contains_ncu twitter_utf8.csv badhet
-ncu --set full -o ../profiles/badhet_amazon_arts_and_crafts ../build/contains_ncu amazon_arts_and_crafts.csv badhet
-ncu --set full -o ../profiles/badhet_yelp ../build/contains_ncu yelp_reviews.csv badhet
-ncu --set full -o ../profiles/badhet_github ../build/contains_ncu github_commits.csv badhet
-ncu --set full -o ../profiles/badhet_common_urls ../build/contains_ncu common_crawl_urls.csv badhet
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu skew_32.csv het > ../profiles/het/het_skew_32.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu skew_16.csv het > ../profiles/het/het_skew_16.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu skew_64.csv het > ../profiles/het/het_skew_64.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu uniform_dist_16_128.csv het > ../profiles/het/het_uniform.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu normal_16_128.csv het > ../profiles/het/het_normal.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu bimodal_16_5_512_100.csv het > ../profiles/het/het_bimodal_16_5_512_100.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu bimodal_32_10_512_100.csv het > ../profiles/het/het_bimodal_32_10_512_100.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu bimodal_64_20_512_100.csv het > ../profiles/het/het_bimodal_64_20_512_100.csv.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu bimodal_16_5_8192_500.csv het > ../profiles/het/het_bimodal_16_5_8192_500.csv.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu bimodal_32_10_8192_500.csv het > ../profiles/het/het_bimodal_32_10_8192_500.csv.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu bimodal_64_20_8192_500.csv het > ../profiles/het/het_bimodal_64_20_8192_500.csv.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu bimodal_16_5_65536_2000.csv het > ../profiles/het/het_bimodal_16_5_65536_2000.csv.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu bimodal_32_10_65536_2000.csv het > ../profiles/het/het_bimodal_32_10_65536_2000.csv.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu bimodal_64_20_65536_2000.csv het > ../profiles/het/het_bimodal_64_20_65536_2000.csv.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu fb_comments.csv het > ../profiles/het/het_fb_comments.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu fb_posts.csv het > ../profiles/het/het_fb_posts.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu reddit_utf8.csv het > ../profiles/het/het_reddit.csv.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu twitter_utf8.csv het > ../profiles/het/het_twitter.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu amazon_arts_and_crafts.csv het > ../profiles/het/het_amazon.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu yelp_reviews.csv het > ../profiles/het/het_yelp.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu github_commits.csv het > ../profiles/het/het_github.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu common_crawl_urls.csv het > ../profiles/het/het_urls.txt
+
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu skew_32.csv cudf > ../profiles/cudf/cudf_skew_32.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu skew_16.csv cudf > ../profiles/cudf/cudf_skew_16.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu skew_64.csv cudf > ../profiles/cudf/cudf_skew_64.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu uniform_dist_16_128.csv cudf > ../profiles/cudf/cudf_uniform.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu normal_16_128.csv cudf > ../profiles/cudf/cudf_normal.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu bimodal_16_5_512_100.csv cudf > ../profiles/cudf/cudf_bimodal_16_5_512_100.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu bimodal_32_10_512_100.csv cudf > ../profiles/cudf/cudf_bimodal_32_10_512_100.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu bimodal_64_20_512_100.csv cudf > ../profiles/cudf/cudf_bimodal_64_20_512_100.csv.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu bimodal_16_5_8192_500.csv cudf > ../profiles/cudf/cudf_bimodal_16_5_8192_500.csv.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu bimodal_32_10_8192_500.csv cudf > ../profiles/cudf/cudf_bimodal_32_10_8192_500.csv.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu bimodal_64_20_8192_500.csv cudf > ../profiles/cudf/cudf_bimodal_64_20_8192_500.csv.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu bimodal_16_5_65536_2000.csv cudf > ../profiles/cudf/cudf_bimodal_16_5_65536_2000.csv.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu bimodal_32_10_65536_2000.csv cudf > ../profiles/cudf/cudf_bimodal_32_10_65536_2000.csv.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu bimodal_64_20_65536_2000.csv cudf > ../profiles/cudf/cudf_bimodal_64_20_65536_2000.csv.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu fb_comments.csv cudf > ../profiles/cudf/cudf_fb_comments.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu fb_posts.csv cudf > ../profiles/cudf/cudf_fb_posts.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu reddit_utf8.csv cudf > ../profiles/cudf/cudf_reddit.csv.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu twitter_utf8.csv cudf > ../profiles/cudf/cudf_twitter.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu amazon_arts_and_crafts.csv cudf > ../profiles/cudf/cudf_amazon.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu yelp_reviews.csv cudf > ../profiles/cudf/cudf_yelp.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu github_commits.csv cudf > ../profiles/cudf/cudf_github.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu common_crawl_urls.csv cudf > ../profiles/cudf/cudf_urls.txt
+
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu skew_32.csv thread > ../profiles/thread/thread_skew_32.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu skew_16.csv thread > ../profiles/thread/thread_skew_16.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu skew_64.csv thread > ../profiles/thread/thread_skew_64.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu uniform_dist_16_128.csv thread > ../profiles/thread/thread_uniform.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu normal_16_128.csv thread > ../profiles/thread/thread_normal.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu bimodal_16_5_512_100.csv thread > ../profiles/thread/thread_bimodal_16_5_512_100.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu bimodal_32_10_512_100.csv thread > ../profiles/thread/thread_bimodal_32_10_512_100.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu bimodal_64_20_512_100.csv thread > ../profiles/thread/thread_bimodal_64_20_512_100.csv.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu bimodal_16_5_8192_500.csv thread > ../profiles/thread/thread_bimodal_16_5_8192_500.csv.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu bimodal_32_10_8192_500.csv thread > ../profiles/thread/thread_bimodal_32_10_8192_500.csv.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu bimodal_64_20_8192_500.csv thread > ../profiles/thread/thread_bimodal_64_20_8192_500.csv.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu bimodal_16_5_65536_2000.csv thread > ../profiles/thread/thread_bimodal_16_5_65536_2000.csv.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu bimodal_32_10_65536_2000.csv thread > ../profiles/thread/thread_bimodal_32_10_65536_2000.csv.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu bimodal_64_20_65536_2000.csv thread > ../profiles/thread/thread_bimodal_64_20_65536_2000.csv.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu fb_comments.csv thread > ../profiles/thread/thread_fb_comments.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu fb_posts.csv thread > ../profiles/thread/thread_fb_posts.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu reddit_utf8.csv thread > ../profiles/thread/thread_reddit.csv.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu twitter_utf8.csv thread > ../profiles/thread/thread_twitter.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu amazon_arts_and_crafts.csv thread > ../profiles/thread/thread_amazon.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu yelp_reviews.csv thread > ../profiles/thread/thread_yelp.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu github_commits.csv thread > ../profiles/thread/thread_github.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu common_crawl_urls.csv thread > ../profiles/thread/thread_urls.txt
+
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu skew_32.csv warp > ../profiles/warp/warp_skew_32.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu skew_16.csv warp > ../profiles/warp/warp_skew_16.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu skew_64.csv warp > ../profiles/warp/warp_skew_64.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu uniform_dist_16_128.csv warp > ../profiles/warp/warp_uniform.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu normal_16_128.csv warp > ../profiles/warp/warp_normal.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu bimodal_16_5_512_100.csv warp > ../profiles/warp/warp_bimodal_16_5_512_100.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu bimodal_32_10_512_100.csv warp > ../profiles/warp/warp_bimodal_32_10_512_100.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu bimodal_64_20_512_100.csv warp > ../profiles/warp/warp_bimodal_64_20_512_100.csv.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu bimodal_16_5_8192_500.csv warp > ../profiles/warp/warp_bimodal_16_5_8192_500.csv.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu bimodal_32_10_8192_500.csv warp > ../profiles/warp/warp_bimodal_32_10_8192_500.csv.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu bimodal_64_20_8192_500.csv warp > ../profiles/warp/warp_bimodal_64_20_8192_500.csv.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu bimodal_16_5_65536_2000.csv warp > ../profiles/warp/warp_bimodal_16_5_65536_2000.csv.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu bimodal_32_10_65536_2000.csv warp > ../profiles/warp/warp_bimodal_32_10_65536_2000.csv.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu bimodal_64_20_65536_2000.csv warp > ../profiles/warp/warp_bimodal_64_20_65536_2000.csv.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu fb_comments.csv warp > ../profiles/warp/warp_fb_comments.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu fb_posts.csv warp > ../profiles/warp/warp_fb_posts.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu reddit_utf8.csv warp > ../profiles/warp/warp_reddit.csv.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu twitter_utf8.csv warp > ../profiles/warp/warp_twitter.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu amazon_arts_and_crafts.csv warp > ../profiles/warp/warp_amazon.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu yelp_reviews.csv warp > ../profiles/warp/warp_yelp.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu github_commits.csv warp > ../profiles/warp/warp_github.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu common_crawl_urls.csv warp > ../profiles/warp/warp_urls.txt
+
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu skew_32.csv badhet > ../profiles/badhet/badhet_skew_32.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu skew_16.csv badhet > ../profiles/badhet/badhet_skew_16.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu skew_64.csv badhet > ../profiles/badhet/badhet_skew_64.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu uniform_dist_16_128.csv badhet > ../profiles/badhet/badhet_uniform.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu normal_16_128.csv badhet > ../profiles/badhet/badhet_normal.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu bimodal_16_5_512_100.csv badhet > ../profiles/badhet/badhet_bimodal_16_5_512_100.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu bimodal_32_10_512_100.csv badhet > ../profiles/badhet/badhet_bimodal_32_10_512_100.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu bimodal_64_20_512_100.csv badhet > ../profiles/badhet/badhet_bimodal_64_20_512_100.csv.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu bimodal_16_5_8192_500.csv badhet > ../profiles/badhet/badhet_bimodal_16_5_8192_500.csv.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu bimodal_32_10_8192_500.csv badhet > ../profiles/badhet/badhet_bimodal_32_10_8192_500.csv.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu bimodal_64_20_8192_500.csv badhet > ../profiles/badhet/badhet_bimodal_64_20_8192_500.csv.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu bimodal_16_5_65536_2000.csv badhet > ../profiles/badhet/badhet_bimodal_16_5_65536_2000.csv.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu bimodal_32_10_65536_2000.csv badhet > ../profiles/badhet/badhet_bimodal_32_10_65536_2000.csv.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu bimodal_64_20_65536_2000.csv badhet > ../profiles/badhet/badhet_bimodal_64_20_65536_2000.csv.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu fb_comments.csv badhet > ../profiles/badhet/badhet_fb_comments.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu fb_posts.csv badhet > ../profiles/badhet/badhet_fb_posts.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu reddit_utf8.csv badhet > ../profiles/badhet/badhet_reddit.csv.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu twitter_utf8.csv badhet > ../profiles/badhet/badhet_twitter.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu amazon_arts_and_crafts.csv badhet > ../profiles/badhet/badhet_amazon.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu yelp_reviews.csv badhet > ../profiles/badhet/badhet_yelp.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu github_commits.csv badhet > ../profiles/badhet/badhet_github.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu common_crawl_urls.csv badhet > ../profiles/badhet/badhet_urls.txt
