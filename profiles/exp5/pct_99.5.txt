@@ -1,0 +1,52 @@
+Filename: skew_16_pct_99.5.csv
+Method: het
+==PROF== Connected to process 1599147 (/home/akkim7/contains_bench/build/contains_ncu)
+==PROF== Profiling "transform_kernel": 0%....50%....100% - 10 passes
+==PROF== Profiling "contains_warp_parallel_fn_heterogeneous": 0%....50%....100% - 10 passes
+Partition time: 22.124992 ms
+Thread time: 2156.240967 ms
+Warp time: 867.108521 ms
+==PROF== Disconnected from process 1599147
+[1599147] contains_ncu@127.0.0.1
+  void cub::transform_kernel<cub::policy_hub<1, cuda::tuple<int *>>::policy1000, int, contains_heterogeneous(const strings_column_view &, const string_scalar &, rmm::cuda_stream_view, rmm::cccl_async_resource_ref<cuda::basic_resource_ref<1, cuda::device_accessible>>)::[lambda(int) (instance 2)], thrust::permutation_iterator<bool *, int *>, int *>(T2, int, T3, T4, cub::kernel_arg<T5>...) (60067, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 9.0
+    Section: GPU Speed Of Light Throughput
+    ----------------------- ----------- ------------
+    Metric Name             Metric Unit Metric Value
+    ----------------------- ----------- ------------
+    DRAM Frequency                  Ghz         1.59
+    SM Frequency                    Ghz         1.75
+    Elapsed Cycles                cycle      2648794
+    Memory Throughput                 %        89.13
+    DRAM Throughput                   %        89.13
+    Duration                         ms         1.52
+    L1/TEX Cache Throughput           %        22.98
+    L2 Cache Throughput               %        64.79
+    SM Active Cycles              cycle   2634216.23
+    Compute (SM) Throughput           %        26.95
+    ----------------------- ----------- ------------
+
+    INF   This workload is utilizing greater than 80.0% of the available compute or memory performance of this device.  
+          To further improve performance, work will likely need to be shifted from the most utilized to another unit.   
+          Start by analyzing DRAM in the Memory Workload Analysis section.                                              
+
+  contains_warp_parallel_fn_heterogeneous(column_device_view, string_view, bool *, const int *, int) (57883, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 9.0
+    Section: GPU Speed Of Light Throughput
+    ----------------------- ----------- ------------
+    Metric Name             Metric Unit Metric Value
+    ----------------------- ----------- ------------
+    DRAM Frequency                  Ghz         1.59
+    SM Frequency                    Ghz         1.75
+    Elapsed Cycles                cycle     25090606
+    Memory Throughput                 %        32.06
+    DRAM Throughput                   %        32.06
+    Duration                         ms        14.30
+    L1/TEX Cache Throughput           %        21.05
+    L2 Cache Throughput               %        25.19
+    SM Active Cycles              cycle  25056691.47
+    Compute (SM) Throughput           %        93.08
+    ----------------------- ----------- ------------
+
+    INF   This workload is utilizing greater than 80.0% of the available compute or memory performance of this device.  
+          To further improve performance, work will likely need to be shifted from the most utilized to another unit.   
+          Start by analyzing workloads in the Compute Workload Analysis section.                                        
+
