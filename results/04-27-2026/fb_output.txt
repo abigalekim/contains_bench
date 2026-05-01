@@ -1,0 +1,91 @@
+het bench
+Filename: fb_comments.csv
+Running cold run...
+Partition time: 7.419552 ms
+Thread time: 1.400448 ms
+Warp time: 29.100960 ms
+Partition time: 1.306560 ms
+Thread time: 1.356672 ms
+Warp time: 29.079329 ms
+Partition time: 1.299168 ms
+Thread time: 1.356736 ms
+Warp time: 29.080511 ms
+Partition time: 1.304864 ms
+Thread time: 1.352256 ms
+Warp time: 29.066624 ms
+Partition time: 1.309568 ms
+Thread time: 1.355040 ms
+Warp time: 29.078720 ms
+Partition time: 1.299680 ms
+Thread time: 1.355200 ms
+Warp time: 29.079712 ms
+Contains query average: 31.804
+Filename: fb_posts.csv
+Running cold run...
+Partition time: 6.872640 ms
+Thread time: 1.793856 ms
+Warp time: 34.397472 ms
+Partition time: 1.873216 ms
+Thread time: 1.768832 ms
+Warp time: 34.376320 ms
+Partition time: 1.867360 ms
+Thread time: 1.765792 ms
+Warp time: 34.379169 ms
+Partition time: 1.871296 ms
+Thread time: 1.763840 ms
+Warp time: 34.378304 ms
+Partition time: 1.876576 ms
+Thread time: 1.765568 ms
+Warp time: 34.378433 ms
+Partition time: 1.880160 ms
+Thread time: 1.765376 ms
+Warp time: 34.375935 ms
+Contains query average: 38.084
+cudf bench
+Filename: fb_comments.csv
+Running cold run...
+Contains query average: 33.21
+Filename: fb_posts.csv
+Running cold run...
+Contains query average: 38.799
+thread bench
+Filename: fb_comments.csv
+Contains query average: 75.288
+Filename: fb_posts.csv
+Contains query average: 33.388
+warp bench
+Filename: fb_comments.csv
+Contains query average: 33.196
+Filename: fb_posts.csv
+Contains query average: 38.787
+bad het bench
+Filename: fb_comments.csv
+Running cold run...
+Thread time: 4.676384 ms
+Warp time: 29.897217 ms
+Thread time: 2.906048 ms
+Warp time: 29.876545 ms
+Thread time: 2.905952 ms
+Warp time: 29.879105 ms
+Thread time: 2.904064 ms
+Warp time: 29.882113 ms
+Thread time: 2.907136 ms
+Warp time: 29.876575 ms
+Thread time: 2.906272 ms
+Warp time: 29.883039 ms
+Contains query average: 32.84
+Filename: fb_posts.csv
+Running cold run...
+Thread time: 6.042368 ms
+Warp time: 35.346081 ms
+Thread time: 4.135584 ms
+Warp time: 35.325569 ms
+Thread time: 4.129760 ms
+Warp time: 35.326271 ms
+Thread time: 4.131040 ms
+Warp time: 35.323170 ms
+Thread time: 4.138656 ms
+Warp time: 35.322975 ms
+Thread time: 4.130176 ms
+Warp time: 35.323902 ms
+Contains query average: 39.515
