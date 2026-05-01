@@ -1,12 +1,13 @@
-python3 dataset/generate_skew_distr.py 16 20000 99.9
-python3 dataset/generate_skew_distr.py 16 20000 99.5
-python3 dataset/generate_skew_distr.py 16 20000 99
-python3 dataset/generate_skew_distr.py 16 20000 95
-python3 dataset/generate_skew_distr.py 16 20000 90
-python3 dataset/generate_skew_distr.py 16 20000 75
-python3 dataset/generate_skew_distr.py 16 20000 50
-python3 dataset/generate_skew_distr.py 16 20000 25
-python3 dataset/generate_skew_distr.py 16 20000 10
-python3 dataset/generate_skew_distr.py 16 20000 5
-python3 dataset/generate_skew_distr.py 16 20000 0.5
-python3 dataset/generate_skew_distr.py 16 20000 0.1
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu skew_16_pct_0.1.csv cudf > ../profiles/exp5/cudf_pct_0.1.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu skew_16_pct_0.5.csv cudf > ../profiles/exp5/cudf_pct_0.5.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu skew_16_pct_1.0.csv cudf > ../profiles/exp5/cudf_pct_1.0.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu skew_16_pct_5.0.csv cudf > ../profiles/exp5/cudf_pct_5.0.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu skew_16_pct_10.0.csv cudf > ../profiles/exp5/cudf_pct_10.0.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu skew_16_pct_25.0.csv cudf > ../profiles/exp5/cudf_pct_25.0.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu skew_16_pct_50.0.csv cudf > ../profiles/exp5/cudf_pct_50.0.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu skew_16_pct_75.0.csv cudf > ../profiles/exp5/cudf_pct_75.0.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu skew_16_pct_90.0.csv cudf > ../profiles/exp5/cudf_pct_90.0.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu skew_16_pct_95.0.csv cudf > ../profiles/exp5/cudf_pct_95.0.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu skew_16_pct_99.0.csv cudf > ../profiles/exp5/cudf_pct_99.0.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu skew_16_pct_99.5.csv cudf > ../profiles/exp5/cudf_pct_99.5.txt
+ncu --section SpeedOfLight --kernel-name 'regex:transform_kernel|contains_warp_parallel_fn' ../build/contains_ncu skew_16_pct_99.9.csv cudf > ../profiles/exp5/cudf_pct_99.9.txt
