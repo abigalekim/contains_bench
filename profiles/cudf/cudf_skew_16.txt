@@ -1,25 +1,38 @@
 Filename: skew_16.csv
 Method: cudf
-==PROF== Connected to process 1576007 (/home/akkim7/contains_bench/build/contains_ncu)
+==PROF== Connected to process 1625481 (/home/akkim7/contains_bench/build/contains_ncu)
 ==PROF== Profiling "contains_warp_parallel_fn": 0%
 ==WARNING== Backing up device memory in system memory. Kernel replay might be slow. Consider using "--replay-mode application" to avoid memory save-and-restore.
-....50%....100% - 10 passes
-==PROF== Disconnected from process 1576007
-[1576007] contains_ncu@127.0.0.1
+....50%....100% - 11 passes
+==PROF== Disconnected from process 1625481
+[1625481] contains_ncu@127.0.0.1
   unnamed>::contains_warp_parallel_fn(column_device_view, string_view, bool *) (16290158, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 9.0
+    Section: Command line profiler metrics
+    ---------------------------------------------------------- ----------- ------------
+    Metric Name                                                Metric Unit Metric Value
+    ---------------------------------------------------------- ----------- ------------
+    l1tex__t_requests_pipe_lsu_mem_global_op_ld.sum                          1584637252
+    l1tex__t_sector_hit_rate.pct                                         %        84.90
+    l1tex__t_sectors_pipe_lsu_mem_global_op_ld.sum                  sector   2666173830
+    smsp__average_thread_inst_executed_per_inst_executed.ratio                    18.21
+    smsp__issue_active.avg.pct_of_peak_sustained_active                  %        74.52
+    smsp__warps_issue_stalled_long_scoreboard.sum                     warp 212576098374
+    smsp__warps_issue_stalled_wait.sum                                warp 106660423729
+    ---------------------------------------------------------- ----------- ------------
+
     Section: GPU Speed Of Light Throughput
     ----------------------- ----------- ------------
     Metric Name             Metric Unit Metric Value
     ----------------------- ----------- ------------
     DRAM Frequency                  Ghz         1.59
     SM Frequency                    Ghz         1.75
-    Elapsed Cycles                cycle     88221240
+    Elapsed Cycles                cycle     88221460
     Memory Throughput                 %        27.86
     DRAM Throughput                   %        11.67
     Duration                         ms        50.27
-    L1/TEX Cache Throughput           %        27.87
+    L1/TEX Cache Throughput           %        27.88
     L2 Cache Throughput               %        11.96
-    SM Active Cycles              cycle  88171922.19
+    SM Active Cycles              cycle  88154768.42
     Compute (SM) Throughput           %        74.39
     ----------------------- ----------- ------------
 
