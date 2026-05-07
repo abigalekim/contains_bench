@@ -11,7 +11,7 @@ def main():
     filename = sys.argv[1]
     print(f"Filename: {filename}")
     
-    csv_filename = f"/mnt/wiscdb/abigale/string_dataset_csvs/{filename}"
+    csv_filename = f"/home/akkim7/string_datasets/{filename}"
     request = "Harum Hic Ex At"
     
     # Read CSV - treat each line as a single value

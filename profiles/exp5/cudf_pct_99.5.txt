@@ -1,24 +1,37 @@
 Filename: skew_16_pct_99.5.csv
 Method: cudf
-==PROF== Connected to process 1600922 (/home/akkim7/contains_bench/build/contains_ncu)
-==PROF== Profiling "contains_warp_parallel_fn": 0%....50%....100% - 10 passes
-==PROF== Disconnected from process 1600922
-[1600922] contains_ncu@127.0.0.1
+==PROF== Connected to process 1627152 (/home/akkim7/contains_bench/build/contains_ncu)
+==PROF== Profiling "contains_warp_parallel_fn": 0%....50%....100% - 11 passes
+==PROF== Disconnected from process 1627152
+[1627152] contains_ncu@127.0.0.1
   unnamed>::contains_warp_parallel_fn(column_device_view, string_view, bool *) (11590609, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 9.0
+    Section: Command line profiler metrics
+    ---------------------------------------------------------- ----------- ------------
+    Metric Name                                                Metric Unit Metric Value
+    ---------------------------------------------------------- ----------- ------------
+    l1tex__t_requests_pipe_lsu_mem_global_op_ld.sum                          1321552544
+    l1tex__t_sector_hit_rate.pct                                         %        83.65
+    l1tex__t_sectors_pipe_lsu_mem_global_op_ld.sum                  sector   2333032518
+    smsp__average_thread_inst_executed_per_inst_executed.ratio                    20.06
+    smsp__issue_active.avg.pct_of_peak_sustained_active                  %        74.11
+    smsp__warps_issue_stalled_long_scoreboard.sum                     warp 168345804015
+    smsp__warps_issue_stalled_wait.sum                                warp  88700794349
+    ---------------------------------------------------------- ----------- ------------
+
     Section: GPU Speed Of Light Throughput
     ----------------------- ----------- ------------
     Metric Name             Metric Unit Metric Value
     ----------------------- ----------- ------------
     DRAM Frequency                  Ghz         1.59
     SM Frequency                    Ghz         1.75
-    Elapsed Cycles                cycle     72848981
+    Elapsed Cycles                cycle     72844340
     Memory Throughput                 %        26.34
     DRAM Throughput                   %        13.73
     Duration                         ms        41.51
     L1/TEX Cache Throughput           %        26.34
     L2 Cache Throughput               %        13.36
-    SM Active Cycles              cycle  72823621.53
-    Compute (SM) Throughput           %        74.02
+    SM Active Cycles              cycle  72844593.60
+    Compute (SM) Throughput           %        74.04
     ----------------------- ----------- ------------
 
     OPT   Compute is more heavily utilized than Memory: Look at the Compute Workload Analysis section to see what the   

@@ -1,24 +1,37 @@
 Filename: skew_64.csv
 Method: thread
-==PROF== Connected to process 1576999 (/home/akkim7/contains_bench/build/contains_ncu)
-==PROF== Profiling "transform_kernel": 0%....50%....100% - 10 passes
-==PROF== Disconnected from process 1576999
-[1576999] contains_ncu@127.0.0.1
+==PROF== Connected to process 1765584 (/home/akkim7/contains_bench/build/contains_ncu)
+==PROF== Profiling "transform_kernel": 0%....50%....100% - 11 passes
+==PROF== Disconnected from process 1765584
+[1765584] contains_ncu@127.0.0.1
   void transform_kernel<policy_hub<1, tuple<counting_iterator<int, use_default, use_default, use_default>>>::policy1000, int, unique_ptr<column, default_delete<column>> unnamed>::contains_fn<contains_thread(const strings_column_view &, const string_scalar &, cuda_stream_view, cccl_async_resource_ref<basic_resource_ref<1, device_accessible>>)::[lambda(string_view, string_view) (instance 1)]>(const strings_column_view &, const string_scalar &, T1, cuda_stream_view, cccl_async_resource_ref<basic_resource_ref<1, device_accessible>>)::[lambda(int) (instance 1)], bool *, counting_iterator<int, use_default, use_default, use_default>>(T2, int, T3, T4, kernel_arg<T5>...) (53678, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 9.0
+    Section: Command line profiler metrics
+    ---------------------------------------------------------- ----------- ------------
+    Metric Name                                                Metric Unit Metric Value
+    ---------------------------------------------------------- ----------- ------------
+    l1tex__t_requests_pipe_lsu_mem_global_op_ld.sum                         11189455424
+    l1tex__t_sector_hit_rate.pct                                         %        97.64
+    l1tex__t_sectors_pipe_lsu_mem_global_op_ld.sum                  sector  15221683427
+    smsp__average_thread_inst_executed_per_inst_executed.ratio                     1.74
+    smsp__issue_active.avg.pct_of_peak_sustained_active                  %        89.26
+    smsp__warps_issue_stalled_long_scoreboard.sum                     warp 267154913461
+    smsp__warps_issue_stalled_wait.sum                                warp 499576341835
+    ---------------------------------------------------------- ----------- ------------
+
     Section: GPU Speed Of Light Throughput
     ----------------------- ----------- ------------
     Metric Name             Metric Unit Metric Value
     ----------------------- ----------- ------------
     DRAM Frequency                  Ghz         1.59
-    SM Frequency                    Ghz         1.75
-    Elapsed Cycles                cycle    359833514
-    Memory Throughput                 %        31.91
-    DRAM Throughput                   %         2.77
-    Duration                         ms       205.04
+    SM Frequency                    Ghz         1.77
+    Elapsed Cycles                cycle    359995272
+    Memory Throughput                 %        31.89
+    DRAM Throughput                   %         2.80
+    Duration                         ms       203.39
     L1/TEX Cache Throughput           %        32.04
-    L2 Cache Throughput               %         2.26
-    SM Active Cycles              cycle 358481055.70
-    Compute (SM) Throughput           %        88.65
+    L2 Cache Throughput               %         2.28
+    SM Active Cycles              cycle 358380665.74
+    Compute (SM) Throughput           %        88.57
     ----------------------- ----------- ------------
 
     INF   This workload is utilizing greater than 80.0% of the available compute or memory performance of this device.  
