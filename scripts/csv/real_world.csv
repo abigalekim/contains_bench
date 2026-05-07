@@ -1,0 +1,9 @@
+datasets,het,libcudf
+facebook comments,28.485,33.21
+facebook posts,30.687,38.799
+reddit comments,28.056,35.017
+twitter posts,26.503,49.535
+amazon reviews,28.564,35.137
+yelp reviews,24.2,22.406
+github,29.939,31.533
+common URLs,22.964,45.901
