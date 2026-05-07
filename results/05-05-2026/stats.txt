@@ -1,0 +1,54 @@
+Filename: github_commits.csv
+Total strings:     24985364
+Longer than 128B:  17264740
+128B or shorter:   7720624
+Mean length:       429.84
+Median length:     280.00
+Std dev:           1116.46
+95th percentile:   1300
+99th percentile:   2563
+Filename: common_crawl_urls.csv
+Total strings:     139991574
+Longer than 128B:  11003158
+128B or shorter:   128988416
+Mean length:       76.70
+Median length:     65.00
+Std dev:           62.98
+95th percentile:   147
+99th percentile:   256
+Filename: stackoverflow.csv
+Total strings:     200768190
+Longer than 128B:  1122019
+128B or shorter:   199646171
+Mean length:       53.49
+Median length:     50.00
+Std dev:           20.46
+95th percentile:   92
+99th percentile:   119
+Filename: shopify.csv
+Total strings:     179932512
+Longer than 128B:  16141569
+128B or shorter:   163790943
+Mean length:       59.85
+Median length:     47.00
+Std dev:           43.41
+95th percentile:   168
+99th percentile:   198
+Filename: nus.csv
+Total strings:     133499639
+Longer than 128B:  31034191
+128B or shorter:   102465448
+Mean length:       80.56
+Median length:     62.00
+Std dev:           59.91
+95th percentile:   161
+99th percentile:   276
+Filename: llm_prompts.csv
+Total strings:     15110383
+Longer than 128B:  9233976
+128B or shorter:   5876407
+Mean length:       710.80
+Median length:     263.00
+Std dev:           1082.51
+95th percentile:   3177
+99th percentile:   5132
