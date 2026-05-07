@@ -28,4 +28,4 @@ def process_file(filename):
   #plt.hist(lengths, bins=15, edgecolor='black')
   #plt.savefig("help.pdf")
 
-process_file("/mnt/wiscdb/abigale/string_dataset_csvs/twitter_utf8.csv")
+process_file("/home/akkim7/string_datasets/twitter_utf8.csv")
