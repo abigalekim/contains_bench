@@ -84,19 +84,27 @@ df_all = pd.concat([df_syn, df_rw], ignore_index=True)
 
 
 # ===== GRAPH 1: Thread Instruction Ratio (All Workloads) =====
-fig, ax = plt.subplots(figsize=(10, 6))
+# Columns: het_transform (thread kernel), het_main (warp kernel),
+#          cudf kernel, thread-per-string impl, warp-per-string impl
+fig, ax = plt.subplots(figsize=(12, 6))
 
 x = np.arange(len(df_all))
-width = 0.25
+width = 0.15
 
-ax.bar(x - width, df_all['het_transform_thread_inst_ratio'].values, width,
+ax.bar(x - 2 * width, df_all['het_thread_avg_thread_per_inst'].values, width,
        label='Het Transform Kernel (thread)', color=color_set[7],
        edgecolor='black', linewidth=0.5)
-ax.bar(x,          df_all['het_main_thread_inst_ratio'].values,      width,
-       label='Het Main Kernel (warp)',          color=color_set[8],
+ax.bar(x - 1 * width, df_all['het_warp_avg_thread_per_inst'].values, width,
+       label='Het Main Kernel (warp)', color=color_set[8],
        edgecolor='black', linewidth=0.5)
-ax.bar(x + width,  df_all['cudf_thread_inst_ratio'].values,          width,
-       label='cuDF Kernel',                    color=color_set[1],
+ax.bar(x,              df_all['cudf_avg_thread_per_inst'].values, width,
+       label='cuDF Kernel', color=color_set[1],
+       edgecolor='black', linewidth=0.5)
+ax.bar(x + 1 * width,  df_all['thread_avg_thread_per_inst'].values, width,
+       label='Thread per String', color=color_set[3],
+       edgecolor='black', linewidth=0.5)
+ax.bar(x + 2 * width,  df_all['warp_avg_thread_per_inst'].values, width,
+       label='Warp per String', color=color_set[0],
        edgecolor='black', linewidth=0.5)
 
 ax.axhline(y=32, color='gray', linestyle='--', linewidth=1.2, label='Ideal (32)')
@@ -107,7 +115,7 @@ ax.set_xticks(x)
 ax.set_xticklabels(df_all['formal_label'], rotation=40, ha='right')
 ax.grid(axis='y', linestyle='--')
 ax.legend(frameon=True, loc='upper center', bbox_to_anchor=(0.5, -0.42),
-          ncol=4, handlelength=1.5, columnspacing=1.0)
+          ncol=3, handlelength=1.5, columnspacing=1.0)
 
 plt.tight_layout()
 plt.subplots_adjust(bottom=0.32)
@@ -117,16 +125,22 @@ print("Generated: exp2_thread_inst_ratio_all.pdf")
 
 
 # ===== GRAPH 2: L1 Cache Requests (All Workloads) =====
-fig, ax = plt.subplots(figsize=(10, 5))
+fig, ax = plt.subplots(figsize=(12, 5))
 
-ax.bar(x - width, df_all['het_transform_l1_requests'].values, width,
+ax.bar(x - 2 * width, df_all['het_thread_l1_requests'].values, width,
        label='Het Transform Kernel (thread)', color=color_set[7],
        edgecolor='black', linewidth=0.5)
-ax.bar(x,          df_all['het_main_l1_requests'].values,      width,
-       label='Het Main Kernel (warp)',          color=color_set[8],
+ax.bar(x - 1 * width, df_all['het_warp_l1_requests'].values, width,
+       label='Het Main Kernel (warp)', color=color_set[8],
        edgecolor='black', linewidth=0.5)
-ax.bar(x + width,  df_all['cudf_l1_requests'].values,          width,
-       label='cuDF Kernel',                    color=color_set[1],
+ax.bar(x,              df_all['cudf_l1_requests'].values, width,
+       label='cuDF Kernel', color=color_set[1],
+       edgecolor='black', linewidth=0.5)
+ax.bar(x + 1 * width,  df_all['thread_l1_requests'].values, width,
+       label='Thread per String', color=color_set[3],
+       edgecolor='black', linewidth=0.5)
+ax.bar(x + 2 * width,  df_all['warp_l1_requests'].values, width,
+       label='Warp per String', color=color_set[0],
        edgecolor='black', linewidth=0.5)
 
 ax.set_ylabel('L1 Cache Requests')
@@ -138,9 +152,11 @@ ax.yaxis.set_major_formatter(
         lambda v, _: f'{v/1e9:.1f}B' if v >= 1e9 else f'{v/1e6:.0f}M'
     )
 )
-ax.legend(frameon=True, loc='upper right')
+ax.legend(frameon=True, loc='upper center', bbox_to_anchor=(0.5, -0.42),
+          ncol=3, handlelength=1.5, columnspacing=1.0)
 
 plt.tight_layout()
+plt.subplots_adjust(bottom=0.15)
 plt.savefig('exp2_l1_requests_all.pdf', dpi=300, bbox_inches='tight')
 plt.close()
 print("Generated: exp2_l1_requests_all.pdf")

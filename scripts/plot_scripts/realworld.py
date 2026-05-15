@@ -36,21 +36,28 @@ mapping = {
     'amazon reviews':    'Amazon',
     'yelp reviews':      'Yelp',
     'github':            'GitHub',
-    'common urls':       'URLs'
+    'common urls':       'URLs',
+    'shopify':           'Shopify',
+    'text messages':     'NUS Text Msgs',
+    'llm chats':         'LLM Chat Logs'
 }
 
 df = pd.read_csv(CSV_PATH)
 df['formal_label'] = df['datasets'].str.lower().str.strip().map(mapping).fillna(df['datasets'])
 
-fig, ax = plt.subplots(figsize=(10, 5))
+fig, ax = plt.subplots(figsize=(12, 5))
 
 x = np.arange(len(df))
-width = 0.35
+width = 0.2
 
-ax.bar(x - width / 2, df['het'].values,    width, label='Heterogeneous',
+ax.bar(x - 1.5 * width, df['het'].values,    width, label='Heterogeneous',
        color=color_set[0], edgecolor='black', linewidth=0.5)
-ax.bar(x + width / 2, df['libcudf'].values, width, label='libcudf 25.10',
+ax.bar(x - 0.5 * width, df['libcudf'].values, width, label='libcudf 25.10',
        color=color_set[1], edgecolor='black', linewidth=0.5)
+ax.bar(x + 0.5 * width, df['thread'].values,  width, label='Thread per String',
+       color=color_set[3], edgecolor='black', linewidth=0.5)
+ax.bar(x + 1.5 * width, df['warp'].values,    width, label='Warp per String',
+       color=color_set[7], edgecolor='black', linewidth=0.5)
 
 ax.set_ylabel('Execution Time (ms)')
 ax.set_xticks(x)
