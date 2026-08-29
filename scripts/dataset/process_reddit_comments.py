@@ -1,7 +1,7 @@
 import csv
 
-input_path = "/home/abigale/.cache/kagglehub/datasets/smagnan/1-million-reddit-comments-from-40-subreddits/versions/1/kaggle_RC_2019-05.csv"
-output_path = "/mnt/wiscdb/abigale/string_dataset_csvs/reddit_utf8.csv"
+input_path = "/home/akkim7/.cache/kagglehub/datasets/smagnan/1-million-reddit-comments-from-40-subreddits/versions/1/kaggle_RC_2019-05.csv"
+output_path = "/home/akkim7/string_datasets/reddit_utf8.csv"
 GIGABYTE = 1073741824
 
 # Read with latin-1 (won't throw errors), write as UTF-8
@@ -14,7 +14,7 @@ with open(input_path, "r", encoding="latin-1") as f_in:
     writer = csv.writer(f_out)
       
     total_bytes = 0
-    total_len = 5 * GIGABYTE
+    total_len = 10 * GIGABYTE
     gb_written = 0
     row_idx = 0
 

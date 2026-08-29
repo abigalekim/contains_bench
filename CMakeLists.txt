@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.20)
 
-set(CONDA_ENV_PATH "/home/ubuntu/miniconda3/envs/cudf_dev")
+set(CONDA_ENV_PATH "/home/akkim7/micromamba/envs/cudf_dev")
 
 set(CMAKE_C_COMPILER "${CONDA_ENV_PATH}/bin/gcc")
 set(CMAKE_CXX_COMPILER "${CONDA_ENV_PATH}/bin/g++")
@@ -43,9 +43,9 @@ find_library(rapids_logger_library NAMES rapids_logger PATHS ${CONDA_ENV_PATH}/l
 message(STATUS "Found cudf at: ${cudf_library}")
 
 # Create executable
-add_executable(contains_bench src/bench.cpp)
+add_executable(contains_het src/het_bench.cpp)
 
-target_include_directories(contains_bench PRIVATE
+target_include_directories(contains_het PRIVATE
     ${CONDA_ENV_PATH}/include/rapids        # source-built CCCL, matches libcudf.so ABI
     ${CONDA_ENV_PATH}/include               # everything else
     ${CONDA_ENV_PATH}/targets/x86_64-linux/include
@@ -53,7 +53,97 @@ target_include_directories(contains_bench PRIVATE
 )
 
 # Link libraries
-target_link_libraries(contains_bench PRIVATE
+target_link_libraries(contains_het PRIVATE
+  ${cudf_library}
+  ${rmm_library}
+  ${rapids_logger_library}
+  ${CUDA_LIBRARIES}
+)
+
+# Create executable
+add_executable(contains_cudf src/libcudf_bench.cpp)
+
+target_include_directories(contains_cudf PRIVATE
+    ${CONDA_ENV_PATH}/include/rapids        # source-built CCCL, matches libcudf.so ABI
+    ${CONDA_ENV_PATH}/include               # everything else
+    ${CONDA_ENV_PATH}/targets/x86_64-linux/include
+    ${CONDA_ENV_PATH}/targets/x86_64-linux/include/cccl
+)
+
+# Link libraries
+target_link_libraries(contains_cudf PRIVATE
+  ${cudf_library}
+  ${rmm_library}
+  ${rapids_logger_library}
+  ${CUDA_LIBRARIES}
+)
+
+# Create executable
+add_executable(contains_badhet src/badhet_bench.cpp)
+
+target_include_directories(contains_badhet PRIVATE
+    ${CONDA_ENV_PATH}/include/rapids        # source-built CCCL, matches libcudf.so ABI
+    ${CONDA_ENV_PATH}/include               # everything else
+    ${CONDA_ENV_PATH}/targets/x86_64-linux/include
+    ${CONDA_ENV_PATH}/targets/x86_64-linux/include/cccl
+)
+
+# Link libraries
+target_link_libraries(contains_badhet PRIVATE
+  ${cudf_library}
+  ${rmm_library}
+  ${rapids_logger_library}
+  ${CUDA_LIBRARIES}
+)
+
+# Create executable
+add_executable(contains_warp src/warp_bench.cpp)
+
+target_include_directories(contains_warp PRIVATE
+    ${CONDA_ENV_PATH}/include/rapids        # source-built CCCL, matches libcudf.so ABI
+    ${CONDA_ENV_PATH}/include               # everything else
+    ${CONDA_ENV_PATH}/targets/x86_64-linux/include
+    ${CONDA_ENV_PATH}/targets/x86_64-linux/include/cccl
+)
+
+# Link libraries
+target_link_libraries(contains_warp PRIVATE
+  ${cudf_library}
+  ${rmm_library}
+  ${rapids_logger_library}
+  ${CUDA_LIBRARIES}
+)
+
+# Create executable
+add_executable(contains_thread src/thread_bench.cpp)
+
+target_include_directories(contains_thread PRIVATE
+    ${CONDA_ENV_PATH}/include/rapids        # source-built CCCL, matches libcudf.so ABI
+    ${CONDA_ENV_PATH}/include               # everything else
+    ${CONDA_ENV_PATH}/targets/x86_64-linux/include
+    ${CONDA_ENV_PATH}/targets/x86_64-linux/include/cccl
+)
+
+# Link libraries
+target_link_libraries(contains_thread PRIVATE
+  ${cudf_library}
+  ${rmm_library}
+  ${rapids_logger_library}
+  ${CUDA_LIBRARIES}
+)
+
+# Create executable
+add_executable(contains_ncu src/ncu_bench.cpp)
+
+target_include_directories(contains_ncu PRIVATE
+    ${CONDA_ENV_PATH}/include/rapids        # source-built CCCL, matches libcudf.so ABI
+    ${CONDA_ENV_PATH}/include               # everything else
+    ${CONDA_ENV_PATH}/targets/x86_64-linux/include
+    ${CONDA_ENV_PATH}/targets/x86_64-linux/include/cccl
+)
+
+# Link libraries
+target_link_libraries(contains_ncu PRIVATE
   ${cudf_library}
   ${rmm_library}
   ${rapids_logger_library}

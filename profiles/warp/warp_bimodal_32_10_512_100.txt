@@ -1,0 +1,42 @@
+Filename: bimodal_32_10_512_100.csv
+Method: warp
+==PROF== Connected to process 1764446 (/home/akkim7/contains_bench/build/contains_ncu)
+==PROF== Profiling "contains_warp_parallel_fn": 0%
+==WARNING== Backing up device memory in system memory. Kernel replay might be slow. Consider using "--replay-mode application" to avoid memory save-and-restore.
+....50%....100% - 11 passes
+==PROF== Disconnected from process 1764446
+[1764446] contains_ncu@127.0.0.1
+  unnamed>::contains_warp_parallel_fn(column_device_view, string_view, bool *) (39588302, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 9.0
+    Section: Command line profiler metrics
+    ---------------------------------------------------------- ----------- ------------
+    Metric Name                                                Metric Unit Metric Value
+    ---------------------------------------------------------- ----------- ------------
+    l1tex__t_requests_pipe_lsu_mem_global_op_ld.sum                          4004261923
+    l1tex__t_sector_hit_rate.pct                                         %        88.30
+    l1tex__t_sectors_pipe_lsu_mem_global_op_ld.sum                  sector   4647114764
+    smsp__average_thread_inst_executed_per_inst_executed.ratio                    13.53
+    smsp__issue_active.avg.pct_of_peak_sustained_active                  %        76.45
+    smsp__warps_issue_stalled_long_scoreboard.sum                     warp 557633544227
+    smsp__warps_issue_stalled_wait.sum                                warp 231974445246
+    ---------------------------------------------------------- ----------- ------------
+
+    Section: GPU Speed Of Light Throughput
+    ----------------------- ----------- ------------
+    Metric Name             Metric Unit Metric Value
+    ----------------------- ----------- ------------
+    DRAM Frequency                  Ghz         1.59
+    SM Frequency                    Ghz         1.77
+    Elapsed Cycles                cycle    188858843
+    Memory Throughput                 %        32.31
+    DRAM Throughput                   %         6.27
+    Duration                         ms       106.70
+    L1/TEX Cache Throughput           %        32.32
+    L2 Cache Throughput               %         8.20
+    SM Active Cycles              cycle 188680410.71
+    Compute (SM) Throughput           %        76.44
+    ----------------------- ----------- ------------
+
+    OPT   Compute is more heavily utilized than Memory: Look at the Compute Workload Analysis section to see what the   
+          compute pipelines are spending their time doing. Also, consider whether any computation is redundant and      
+          could be reduced or moved to look-up tables.                                                                  
+

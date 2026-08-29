@@ -1,0 +1,212 @@
+het bench
+Filename: skew_16_128.csv
+Running cold run...
+Partition time: 20.479424 ms
+Thread time: 25.393824 ms
+Partition time: 10.333216 ms
+Thread time: 25.350496 ms
+Partition time: 10.329440 ms
+Thread time: 25.348896 ms
+Partition time: 10.337952 ms
+Thread time: 25.352192 ms
+Partition time: 10.365600 ms
+Thread time: 25.349089 ms
+Partition time: 10.361344 ms
+Thread time: 25.360767 ms
+Contains query average: 35.747
+Filename: skew_16_256.csv
+Running cold run...
+Partition time: 13.667136 ms
+Thread time: 9.618624 ms
+Warp time: 3.317056 ms
+Partition time: 9.694880 ms
+Thread time: 9.588896 ms
+Warp time: 3.300352 ms
+Partition time: 9.694176 ms
+Thread time: 9.589664 ms
+Warp time: 3.297856 ms
+Partition time: 9.693824 ms
+Thread time: 9.591392 ms
+Warp time: 3.299008 ms
+Partition time: 9.669152 ms
+Thread time: 9.591424 ms
+Warp time: 3.298624 ms
+Partition time: 9.676192 ms
+Thread time: 9.593504 ms
+Warp time: 3.299328 ms
+Contains query average: 22.623
+Filename: skew_16_512.csv
+Running cold run...
+Partition time: 12.690880 ms
+Thread time: 8.452224 ms
+Warp time: 4.853696 ms
+Partition time: 8.496128 ms
+Thread time: 8.427840 ms
+Warp time: 4.831552 ms
+Partition time: 8.463232 ms
+Thread time: 8.424768 ms
+Warp time: 4.831680 ms
+Partition time: 8.492128 ms
+Thread time: 8.426752 ms
+Warp time: 4.831808 ms
+Partition time: 8.510592 ms
+Thread time: 8.424960 ms
+Warp time: 4.831936 ms
+Partition time: 8.486464 ms
+Thread time: 8.423168 ms
+Warp time: 4.831296 ms
+Contains query average: 21.797
+Filename: skew_16_1024.csv
+Running cold run...
+Partition time: 13.311392 ms
+Thread time: 6.907296 ms
+Warp time: 7.116768 ms
+Partition time: 6.833792 ms
+Thread time: 6.768160 ms
+Warp time: 7.096832 ms
+Partition time: 6.825184 ms
+Thread time: 6.768160 ms
+Warp time: 7.097056 ms
+Partition time: 6.846944 ms
+Thread time: 6.771616 ms
+Warp time: 7.095680 ms
+Partition time: 6.836864 ms
+Thread time: 6.769120 ms
+Warp time: 7.097120 ms
+Partition time: 6.840672 ms
+Thread time: 6.767712 ms
+Warp time: 7.096320 ms
+Contains query average: 20.749
+Filename: skew_16_2048.csv
+Running cold run...
+Partition time: 11.292576 ms
+Thread time: 4.915040 ms
+Warp time: 9.734976 ms
+Partition time: 4.931424 ms
+Thread time: 4.889728 ms
+Warp time: 9.715776 ms
+Partition time: 4.928672 ms
+Thread time: 4.889440 ms
+Warp time: 9.716096 ms
+Partition time: 4.917568 ms
+Thread time: 4.887680 ms
+Warp time: 9.715808 ms
+Partition time: 4.916736 ms
+Thread time: 4.885600 ms
+Warp time: 9.716352 ms
+Partition time: 4.926272 ms
+Thread time: 4.888960 ms
+Warp time: 9.714944 ms
+Contains query average: 19.578
+Filename: skew_16_4096.csv
+Running cold run...
+Partition time: 10.482624 ms
+Thread time: 3.162016 ms
+Warp time: 12.156224 ms
+Partition time: 3.190464 ms
+Thread time: 3.130208 ms
+Warp time: 12.132448 ms
+Partition time: 3.169408 ms
+Thread time: 3.133856 ms
+Warp time: 12.132032 ms
+Partition time: 3.161312 ms
+Thread time: 3.135520 ms
+Warp time: 12.131392 ms
+Partition time: 3.166432 ms
+Thread time: 3.132160 ms
+Warp time: 12.131456 ms
+Partition time: 3.167296 ms
+Thread time: 3.130432 ms
+Warp time: 12.131232 ms
+Contains query average: 18.485
+Filename: skew_16_8192.csv
+Running cold run...
+Partition time: 9.571680 ms
+Thread time: 1.854592 ms
+Warp time: 13.948352 ms
+Partition time: 1.864544 ms
+Thread time: 1.826144 ms
+Warp time: 13.928480 ms
+Partition time: 1.861440 ms
+Thread time: 1.826112 ms
+Warp time: 13.930016 ms
+Partition time: 1.849760 ms
+Thread time: 1.832608 ms
+Warp time: 13.929664 ms
+Partition time: 1.849248 ms
+Thread time: 1.827168 ms
+Warp time: 13.929696 ms
+Partition time: 1.862624 ms
+Thread time: 1.826144 ms
+Warp time: 13.928448 ms
+Contains query average: 17.661
+Filename: skew_16_16384.csv
+Running cold run...
+Partition time: 9.353408 ms
+Thread time: 1.027680 ms
+Warp time: 15.073952 ms
+Partition time: 1.037568 ms
+Thread time: 1.002592 ms
+Warp time: 15.046048 ms
+Partition time: 1.037600 ms
+Thread time: 1.003648 ms
+Warp time: 15.043488 ms
+Partition time: 1.038752 ms
+Thread time: 0.999776 ms
+Warp time: 15.044224 ms
+Partition time: 1.031744 ms
+Thread time: 0.998976 ms
+Warp time: 15.043392 ms
+Partition time: 1.042304 ms
+Thread time: 1.004960 ms
+Warp time: 15.042976 ms
+Contains query average: 17.135
+Filename: skew_16_32768.csv
+Running cold run...
+Partition time: 7.588864 ms
+Thread time: 0.558560 ms
+Warp time: 15.755648 ms
+Partition time: 0.553024 ms
+Thread time: 0.535168 ms
+Warp time: 15.734208 ms
+Partition time: 0.545472 ms
+Thread time: 0.533536 ms
+Warp time: 15.734848 ms
+Partition time: 0.546016 ms
+Thread time: 0.533376 ms
+Warp time: 15.733024 ms
+Partition time: 0.551424 ms
+Thread time: 0.533728 ms
+Warp time: 15.735488 ms
+Partition time: 0.546752 ms
+Thread time: 0.532544 ms
+Warp time: 15.733952 ms
+Contains query average: 16.863
+cudf
+Filename: skew_16_128.csv
+Running cold run...
+Contains query average: 24.745
+Filename: skew_16_256.csv
+Running cold run...
+Contains query average: 45.946
+Filename: skew_16_512.csv
+Running cold run...
+Contains query average: 80.722
+Filename: skew_16_1024.csv
+Running cold run...
+Contains query average: 129.84
+Filename: skew_16_2048.csv
+Running cold run...
+Contains query average: 186.63
+Filename: skew_16_4096.csv
+Running cold run...
+Contains query average: 239.27
+Filename: skew_16_8192.csv
+Running cold run...
+Contains query average: 45.183
+Filename: skew_16_16384.csv
+Running cold run...
+Contains query average: 33.544
+Filename: skew_16_32768.csv
+Running cold run...
+Contains query average: 27.545

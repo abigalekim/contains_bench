@@ -1,0 +1,53 @@
+Filename: skew_32.csv
+Method: badhet
+==PROF== Connected to process 1578831 (/home/akkim7/contains_bench/build/contains_ncu)
+==PROF== Profiling "transform_kernel": 0%
+==WARNING== Backing up device memory in system memory. Kernel replay might be slow. Consider using "--replay-mode application" to avoid memory save-and-restore.
+....50%....100% - 10 passes
+==PROF== Profiling "contains_warp_parallel_fn_heterogeneous_bad": 0%....50%....100% - 10 passes
+Thread time: 18114.708984 ms
+Warp time: 14300.167969 ms
+==PROF== Disconnected from process 1578831
+[1578831] contains_ncu@127.0.0.1
+  void cub::transform_kernel<cub::policy_hub<1, cuda::tuple<thrust::counting_iterator<int, thrust::use_default, thrust::use_default, thrust::use_default>>>::policy1000, int, contains_heterogeneous_bad(const strings_column_view &, const string_scalar &, rmm::cuda_stream_view, rmm::cccl_async_resource_ref<cuda::basic_resource_ref<1, cuda::device_accessible>>)::[lambda(int) (instance 1)], bool *, thrust::counting_iterator<int, thrust::use_default, thrust::use_default, thrust::use_default>>(T2, int, T3, T4, cub::kernel_arg<T5>...) (71086, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 9.0
+    Section: GPU Speed Of Light Throughput
+    ----------------------- ----------- ------------
+    Metric Name             Metric Unit Metric Value
+    ----------------------- ----------- ------------
+    DRAM Frequency                  Ghz         1.59
+    SM Frequency                    Ghz         1.76
+    Elapsed Cycles                cycle      5450267
+    Memory Throughput                 %        97.58
+    DRAM Throughput                   %        71.21
+    Duration                         ms         3.09
+    L1/TEX Cache Throughput           %        97.83
+    L2 Cache Throughput               %        50.24
+    SM Active Cycles              cycle   5417394.64
+    Compute (SM) Throughput           %        72.57
+    ----------------------- ----------- ------------
+
+    INF   This workload is utilizing greater than 80.0% of the available compute or memory performance of this device.  
+          To further improve performance, work will likely need to be shifted from the most utilized to another unit.   
+          Start by analyzing L1 in the Memory Workload Analysis section.                                                
+
+  contains_warp_parallel_fn_heterogeneous_bad(column_device_view, string_view, bool *) (13648507, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 9.0
+    Section: GPU Speed Of Light Throughput
+    ----------------------- ----------- ------------
+    Metric Name             Metric Unit Metric Value
+    ----------------------- ----------- ------------
+    DRAM Frequency                  Ghz         1.59
+    SM Frequency                    Ghz         1.77
+    Elapsed Cycles                cycle     43443547
+    Memory Throughput                 %        36.44
+    DRAM Throughput                   %        16.32
+    Duration                         ms        24.55
+    L1/TEX Cache Throughput           %        36.47
+    L2 Cache Throughput               %        13.71
+    SM Active Cycles              cycle  43379673.90
+    Compute (SM) Throughput           %        65.09
+    ----------------------- ----------- ------------
+
+    OPT   Compute is more heavily utilized than Memory: Look at the Compute Workload Analysis section to see what the   
+          compute pipelines are spending their time doing. Also, consider whether any computation is redundant and      
+          could be reduced or moved to look-up tables.                                                                  
+

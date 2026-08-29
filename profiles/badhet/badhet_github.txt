@@ -1,0 +1,75 @@
+Filename: github_commits.csv
+Method: badhet
+==PROF== Connected to process 1579835 (/home/akkim7/contains_bench/build/contains_ncu)
+==PROF== Profiling "transform_kernel": 0%....50%....100% - 10 passes
+==PROF== Profiling "transform_kernel": 0%....50%....100% - 10 passes
+==PROF== Profiling "contains_warp_parallel_fn_heterogeneous_bad": 0%....50%....100% - 10 passes
+Thread time: 677.890747 ms
+Warp time: 1035.867432 ms
+==PROF== Disconnected from process 1579835
+[1579835] contains_ncu@127.0.0.1
+  void cub::transform_kernel<cub::policy_hub<1, cuda::tuple<thrust::counting_iterator<int, thrust::use_default, thrust::use_default, thrust::use_default>>>::policy1000, int, __detail::__return_type_wrapper<int, unnamed>::replace_character_parallel(const strings_column_view &, const string_view &, const string_view &, int, rmm::cuda_stream_view, rmm::cccl_async_resource_ref<cuda::basic_resource_ref<1, cuda::device_accessible>>)::[lambda(int) (instance 1)]>, int *, thrust::counting_iterator<int, thrust::use_default, thrust::use_default, thrust::use_default>>(T2, int, T3, T4, cub::kernel_arg<T5>...) (16267, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 9.0
+    Section: GPU Speed Of Light Throughput
+    ----------------------- ----------- ------------
+    Metric Name             Metric Unit Metric Value
+    ----------------------- ----------- ------------
+    DRAM Frequency                  Ghz         1.59
+    SM Frequency                    Ghz         1.77
+    Elapsed Cycles                cycle     77512792
+    Memory Throughput                 %        39.65
+    DRAM Throughput                   %        14.23
+    Duration                         ms        43.80
+    L1/TEX Cache Throughput           %        61.33
+    L2 Cache Throughput               %        12.24
+    SM Active Cycles              cycle  50071285.23
+    Compute (SM) Throughput           %        35.02
+    ----------------------- ----------- ------------
+
+    OPT   This workload exhibits low compute throughput and memory bandwidth utilization relative to the peak           
+          performance of this device. Achieved compute throughput and/or memory bandwidth below 60.0% of peak           
+          typically indicate latency issues. Look at Scheduler Statistics and Warp State Statistics for potential       
+          reasons.                                                                                                      
+
+  void cub::transform_kernel<cub::policy_hub<1, cuda::tuple<thrust::counting_iterator<int, thrust::use_default, thrust::use_default, thrust::use_default>>>::policy1000, int, contains_heterogeneous_bad(const strings_column_view &, const string_scalar &, rmm::cuda_stream_view, rmm::cccl_async_resource_ref<cuda::basic_resource_ref<1, cuda::device_accessible>>)::[lambda(int) (instance 1)], bool *, thrust::counting_iterator<int, thrust::use_default, thrust::use_default, thrust::use_default>>(T2, int, T3, T4, cub::kernel_arg<T5>...) (16267, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 9.0
+    Section: GPU Speed Of Light Throughput
+    ----------------------- ----------- ------------
+    Metric Name             Metric Unit Metric Value
+    ----------------------- ----------- ------------
+    DRAM Frequency                  Ghz         1.59
+    SM Frequency                    Ghz         1.76
+    Elapsed Cycles                cycle      1352374
+    Memory Throughput                 %        38.00
+    DRAM Throughput                   %        31.69
+    Duration                         us       768.35
+    L1/TEX Cache Throughput           %        39.23
+    L2 Cache Throughput               %        25.51
+    SM Active Cycles              cycle   1308128.98
+    Compute (SM) Throughput           %        85.62
+    ----------------------- ----------- ------------
+
+    INF   This workload is utilizing greater than 80.0% of the available compute or memory performance of this device.  
+          To further improve performance, work will likely need to be shifted from the most utilized to another unit.   
+          Start by analyzing workloads in the Compute Workload Analysis section.                                        
+
+  contains_warp_parallel_fn_heterogeneous_bad(column_device_view, string_view, bool *) (3123171, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 9.0
+    Section: GPU Speed Of Light Throughput
+    ----------------------- ----------- ------------
+    Metric Name             Metric Unit Metric Value
+    ----------------------- ----------- ------------
+    DRAM Frequency                  Ghz         1.59
+    SM Frequency                    Ghz         1.77
+    Elapsed Cycles                cycle     54225426
+    Memory Throughput                 %        18.15
+    DRAM Throughput                   %        17.42
+    Duration                         ms        30.64
+    L1/TEX Cache Throughput           %        23.99
+    L2 Cache Throughput               %        14.85
+    SM Active Cycles              cycle  40994606.41
+    Compute (SM) Throughput           %        57.69
+    ----------------------- ----------- ------------
+
+    OPT   This workload exhibits low compute throughput and memory bandwidth utilization relative to the peak           
+          performance of this device. Achieved compute throughput and/or memory bandwidth below 60.0% of peak           
+          typically indicate latency issues. Look at Scheduler Statistics and Warp State Statistics for potential       
+          reasons.                                                                                                      
+

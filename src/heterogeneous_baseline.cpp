@@ -76,7 +76,7 @@ int main(int argc, char** argv) {
   }
   std::string filename = std::string(argv[1]);
   std::cout << "Filename: " + filename << std::endl;
-  std::string prefix = "/mnt/wiscdb/abigale/string_dataset_csvs/";
+  std::string prefix = "/home/akkim7/string_datasets/";
   std::string total_filename = prefix + filename;
 
   float time = run_benchmark(total_filename, false);

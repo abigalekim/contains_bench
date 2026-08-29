@@ -1,0 +1,75 @@
+Filename: bimodal_16_5_65536_2000.csv
+Method: cudf
+==PROF== Connected to process 1626086 (/home/akkim7/contains_bench/build/contains_ncu)
+==PROF== Profiling "transform_kernel": 0%....50%....100% - 11 passes
+==PROF== Profiling "contains_warp_parallel_fn": 0%....50%....100% - 11 passes
+==PROF== Disconnected from process 1626086
+[1626086] contains_ncu@127.0.0.1
+  void cub::transform_kernel<cub::policy_hub<1, cuda::tuple<thrust::counting_iterator<int, thrust::use_default, thrust::use_default, thrust::use_default>>>::policy1000, int, cuda::__return_type_wrapper<int, unnamed>::replace_character_parallel(const strings_column_view &, const string_view &, const string_view &, int, rmm::cuda_stream_view, rmm::cccl_async_resource_ref<cuda::basic_resource_ref<1, cuda::device_accessible>>)::[lambda(int) (instance 1)]>, int *, thrust::counting_iterator<int, thrust::use_default, thrust::use_default, thrust::use_default>>(T2, int, T3, T4, cub::kernel_arg<T5>...) (20386, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 9.0
+    Section: Command line profiler metrics
+    ---------------------------------------------------------- ----------- ------------
+    Metric Name                                                Metric Unit Metric Value
+    ---------------------------------------------------------- ----------- ------------
+    l1tex__t_requests_pipe_lsu_mem_global_op_ld.sum                          9546264787
+    l1tex__t_sector_hit_rate.pct                                         %        96.65
+    l1tex__t_sectors_pipe_lsu_mem_global_op_ld.sum                  sector  10645473500
+    smsp__average_thread_inst_executed_per_inst_executed.ratio                     1.22
+    smsp__issue_active.avg.pct_of_peak_sustained_active                  %        57.87
+    smsp__warps_issue_stalled_long_scoreboard.sum                     warp 155068660444
+    smsp__warps_issue_stalled_wait.sum                                warp  67411224207
+    ---------------------------------------------------------- ----------- ------------
+
+    Section: GPU Speed Of Light Throughput
+    ----------------------- ----------- ------------
+    Metric Name             Metric Unit Metric Value
+    ----------------------- ----------- ------------
+    DRAM Frequency                  Ghz         1.59
+    SM Frequency                    Ghz         1.75
+    Elapsed Cycles                cycle    187433958
+    Memory Throughput                 %        45.99
+    DRAM Throughput                   %         5.28
+    Duration                         ms       106.80
+    L1/TEX Cache Throughput           %        46.86
+    L2 Cache Throughput               %         4.56
+    SM Active Cycles              cycle 182964977.60
+    Compute (SM) Throughput           %        85.71
+    ----------------------- ----------- ------------
+
+    INF   This workload is utilizing greater than 80.0% of the available compute or memory performance of this device.  
+          To further improve performance, work will likely need to be shifted from the most utilized to another unit.   
+          Start by analyzing workloads in the Compute Workload Analysis section.                                        
+
+  unnamed>::contains_warp_parallel_fn(column_device_view, string_view, bool *) (3913941, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 9.0
+    Section: Command line profiler metrics
+    ---------------------------------------------------------- ----------- ------------
+    Metric Name                                                Metric Unit Metric Value
+    ---------------------------------------------------------- ----------- ------------
+    l1tex__t_requests_pipe_lsu_mem_global_op_ld.sum                           912851419
+    l1tex__t_sector_hit_rate.pct                                         %        83.75
+    l1tex__t_sectors_pipe_lsu_mem_global_op_ld.sum                  sector   2158116533
+    smsp__average_thread_inst_executed_per_inst_executed.ratio                    27.18
+    smsp__issue_active.avg.pct_of_peak_sustained_active                  %        67.66
+    smsp__warps_issue_stalled_long_scoreboard.sum                     warp 104520250652
+    smsp__warps_issue_stalled_wait.sum                                warp  57312867650
+    ---------------------------------------------------------- ----------- ------------
+
+    Section: GPU Speed Of Light Throughput
+    ----------------------- ----------- ------------
+    Metric Name             Metric Unit Metric Value
+    ----------------------- ----------- ------------
+    DRAM Frequency                  Ghz         1.59
+    SM Frequency                    Ghz         1.75
+    Elapsed Cycles                cycle     50218453
+    Memory Throughput                 %        21.46
+    DRAM Throughput                   %        18.93
+    Duration                         ms        28.62
+    L1/TEX Cache Throughput           %        21.65
+    L2 Cache Throughput               %        16.52
+    SM Active Cycles              cycle  49910662.10
+    Compute (SM) Throughput           %        66.92
+    ----------------------- ----------- ------------
+
+    OPT   Compute is more heavily utilized than Memory: Look at the Compute Workload Analysis section to see what the   
+          compute pipelines are spending their time doing. Also, consider whether any computation is redundant and      
+          could be reduced or moved to look-up tables.                                                                  
+

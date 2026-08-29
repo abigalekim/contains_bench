@@ -1,0 +1,45 @@
+echo "warp bench"
+../build/contains_warp skew_16_pct_75.0.csv
+../build/contains_warp skew_16_pct_85.0.csv
+../build/contains_warp skew_16_pct_90.0.csv
+../build/contains_warp skew_16_pct_95.0.csv
+../build/contains_warp skew_16_pct_96.0.csv
+../build/contains_warp skew_16_pct_97.0.csv
+../build/contains_warp skew_16_pct_97.5.csv
+../build/contains_warp skew_16_pct_98.0.csv
+../build/contains_warp skew_16_pct_98.5.csv
+../build/contains_warp skew_16_pct_99.0.csv
+../build/contains_warp skew_16_pct_99.5.csv
+../build/contains_warp skew_16_pct_99.9.csv
+../build/contains_warp skew_16_128.csv
+../build/contains_warp skew_16_256.csv
+../build/contains_warp skew_16_512.csv
+../build/contains_warp skew_16_1024.csv
+../build/contains_warp skew_16_2048.csv
+../build/contains_warp skew_16_4096.csv
+../build/contains_warp skew_16_8192.csv
+../build/contains_warp skew_16_16384.csv
+../build/contains_warp skew_16_32768.csv
+
+echo "thread bench"
+../build/contains_thread skew_16_pct_75.0.csv
+../build/contains_thread skew_16_pct_85.0.csv
+../build/contains_thread skew_16_pct_90.0.csv
+../build/contains_thread skew_16_pct_95.0.csv
+../build/contains_thread skew_16_pct_96.0.csv
+../build/contains_thread skew_16_pct_97.0.csv
+../build/contains_thread skew_16_pct_97.5.csv
+../build/contains_thread skew_16_pct_98.0.csv
+../build/contains_thread skew_16_pct_98.5.csv
+../build/contains_thread skew_16_pct_99.0.csv
+../build/contains_thread skew_16_pct_99.5.csv
+../build/contains_thread skew_16_pct_99.9.csv
+../build/contains_thread skew_16_128.csv
+../build/contains_thread skew_16_256.csv
+../build/contains_thread skew_16_512.csv
+../build/contains_thread skew_16_1024.csv
+../build/contains_thread skew_16_2048.csv
+../build/contains_thread skew_16_4096.csv
+../build/contains_thread skew_16_8192.csv
+../build/contains_thread skew_16_16384.csv
+../build/contains_thread skew_16_32768.csv

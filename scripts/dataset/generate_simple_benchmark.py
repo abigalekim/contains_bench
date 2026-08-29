@@ -4,7 +4,7 @@ from lorem_text import lorem
 import sys
 
 output_mb = 2048
-output_dir = "/home/ubuntu/string_datasets"
+output_dir = "/home/akkim7/string_datasets"
 
 GIGABYTE = 1073741824
 MEGABYTE = 1048576
@@ -30,7 +30,7 @@ if __name__ == '__main__':
   output_csv = csv.writer(output_file)
 
   total_bytes = 0
-  total_len = GIGABYTE
+  total_len = 10 * GIGABYTE
   gb_written = 0
   print("Starting writing data with " + option_str + " dataset with string length " + str(string_size))
   while total_bytes < total_len:

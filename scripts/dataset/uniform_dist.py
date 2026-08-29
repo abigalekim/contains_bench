@@ -3,7 +3,7 @@ from lorem_text import lorem
 import sys
 import numpy as np
 
-output_dir = "/mnt/wiscdb/abigale/string_dataset_csvs/libcudf_bench"
+output_dir = "/home/akkim7/string_datasets"
 
 GIGABYTE = 1073741824
 MEGABYTE = 1048576
@@ -24,7 +24,7 @@ if __name__ == '__main__':
   output_csv = csv.writer(output_file)
 
   total_bytes = 0
-  total_len = 5 * GIGABYTE
+  total_len = 10 * GIGABYTE
   gb_written = 0
   print(f"Starting writing data for uniform distribution ({min_size}, {max_size})")
   while total_bytes < total_len:

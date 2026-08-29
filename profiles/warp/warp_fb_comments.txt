@@ -1,0 +1,27 @@
+Filename: fb_comments.csv
+Method: warp
+==PROF== Connected to process 1578525 (/home/akkim7/contains_bench/build/contains_ncu)
+==PROF== Profiling "contains_warp_parallel_fn": 0%....50%....100% - 10 passes
+==PROF== Disconnected from process 1578525
+[1578525] contains_ncu@127.0.0.1
+  unnamed>::contains_warp_parallel_fn(column_device_view, string_view, bool *) (7948400, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 9.0
+    Section: GPU Speed Of Light Throughput
+    ----------------------- ----------- ------------
+    Metric Name             Metric Unit Metric Value
+    ----------------------- ----------- ------------
+    DRAM Frequency                  Ghz         1.59
+    SM Frequency                    Ghz         1.77
+    Elapsed Cycles                cycle     58339926
+    Memory Throughput                 %        27.51
+    DRAM Throughput                   %        16.90
+    Duration                         ms        32.96
+    L1/TEX Cache Throughput           %        27.56
+    L2 Cache Throughput               %        16.00
+    SM Active Cycles              cycle  58209049.46
+    Compute (SM) Throughput           %        75.29
+    ----------------------- ----------- ------------
+
+    OPT   Compute is more heavily utilized than Memory: Look at the Compute Workload Analysis section to see what the   
+          compute pipelines are spending their time doing. Also, consider whether any computation is redundant and      
+          could be reduced or moved to look-up tables.                                                                  
+

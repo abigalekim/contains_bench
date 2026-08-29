@@ -1,0 +1,29 @@
+Filename: common_crawl_urls.csv
+Method: warp
+==PROF== Connected to process 1578794 (/home/akkim7/contains_bench/build/contains_ncu)
+==PROF== Profiling "contains_warp_parallel_fn": 0%
+==WARNING== Backing up device memory in system memory. Kernel replay might be slow. Consider using "--replay-mode application" to avoid memory save-and-restore.
+....50%....100% - 10 passes
+==PROF== Disconnected from process 1578794
+[1578794] contains_ncu@127.0.0.1
+  unnamed>::contains_warp_parallel_fn(column_device_view, string_view, bool *) (17498947, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 9.0
+    Section: GPU Speed Of Light Throughput
+    ----------------------- ----------- ------------
+    Metric Name             Metric Unit Metric Value
+    ----------------------- ----------- ------------
+    DRAM Frequency                  Ghz         1.59
+    SM Frequency                    Ghz         1.77
+    Elapsed Cycles                cycle     80685277
+    Memory Throughput                 %        33.71
+    DRAM Throughput                   %        12.91
+    Duration                         ms        45.59
+    L1/TEX Cache Throughput           %        33.72
+    L2 Cache Throughput               %        13.59
+    SM Active Cycles              cycle  80605498.68
+    Compute (SM) Throughput           %        82.14
+    ----------------------- ----------- ------------
+
+    INF   This workload is utilizing greater than 80.0% of the available compute or memory performance of this device.  
+          To further improve performance, work will likely need to be shifted from the most utilized to another unit.   
+          Start by analyzing workloads in the Compute Workload Analysis section.                                        
+

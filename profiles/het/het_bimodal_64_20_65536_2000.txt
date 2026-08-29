@@ -1,0 +1,113 @@
+Filename: bimodal_64_20_65536_2000.csv
+Method: het
+==PROF== Connected to process 1699135 (/home/akkim7/contains_bench/build/contains_ncu)
+==PROF== Profiling "transform_kernel": 0%....50%....100% - 11 passes
+==PROF== Profiling "transform_kernel": 0%....50%....100% - 11 passes
+==PROF== Profiling "contains_warp_parallel_fn_heterogeneous": 0%....50%....100% - 11 passes
+Partition time: 16.582687 ms
+Thread time: 681.964294 ms
+Warp time: 894.113342 ms
+==PROF== Disconnected from process 1699135
+[1699135] contains_ncu@127.0.0.1
+  void cub::transform_kernel<cub::policy_hub<1, cuda::tuple<thrust::counting_iterator<int, thrust::use_default, thrust::use_default, thrust::use_default>>>::policy1000, int, __detail::__return_type_wrapper<int, unnamed>::replace_character_parallel(const strings_column_view &, const string_view &, const string_view &, int, rmm::cuda_stream_view, rmm::cccl_async_resource_ref<cuda::basic_resource_ref<1, cuda::device_accessible>>)::[lambda(int) (instance 1)]>, int *, thrust::counting_iterator<int, thrust::use_default, thrust::use_default, thrust::use_default>>(T2, int, T3, T4, cub::kernel_arg<T5>...) (17989, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 9.0
+    Section: Command line profiler metrics
+    ---------------------------------------------------------- ----------- ------------
+    Metric Name                                                Metric Unit Metric Value
+    ---------------------------------------------------------- ----------- ------------
+    l1tex__t_requests_pipe_lsu_mem_global_op_ld.sum                          8424604085
+    l1tex__t_sector_hit_rate.pct                                         %        96.65
+    l1tex__t_sectors_pipe_lsu_mem_global_op_ld.sum                  sector  10756887697
+    smsp__average_thread_inst_executed_per_inst_executed.ratio                     1.37
+    smsp__issue_active.avg.pct_of_peak_sustained_active                  %        57.79
+    smsp__warps_issue_stalled_long_scoreboard.sum                     warp 139373312787
+    smsp__warps_issue_stalled_wait.sum                                warp  59501618335
+    ---------------------------------------------------------- ----------- ------------
+
+    Section: GPU Speed Of Light Throughput
+    ----------------------- ----------- ------------
+    Metric Name             Metric Unit Metric Value
+    ----------------------- ----------- ------------
+    DRAM Frequency                  Ghz         1.59
+    SM Frequency                    Ghz         1.77
+    Elapsed Cycles                cycle    169611685
+    Memory Throughput                 %        46.29
+    DRAM Throughput                   %         5.98
+    Duration                         ms        95.83
+    L1/TEX Cache Throughput           %        47.82
+    L2 Cache Throughput               %         5.11
+    SM Active Cycles              cycle 161983411.36
+    Compute (SM) Throughput           %        84.25
+    ----------------------- ----------- ------------
+
+    INF   This workload is utilizing greater than 80.0% of the available compute or memory performance of this device.  
+          To further improve performance, work will likely need to be shifted from the most utilized to another unit.   
+          Start by analyzing workloads in the Compute Workload Analysis section.                                        
+
+  void cub::transform_kernel<cub::policy_hub<1, cuda::tuple<int *>>::policy1000, int, contains_heterogeneous(const strings_column_view &, const string_scalar &, rmm::cuda_stream_view, rmm::cccl_async_resource_ref<cuda::basic_resource_ref<1, cuda::device_accessible>>)::[lambda(int) (instance 2)], thrust::permutation_iterator<bool *, int *>, int *>(T2, int, T3, T4, cub::kernel_arg<T5>...) (17890, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 9.0
+    Section: Command line profiler metrics
+    ---------------------------------------------------------- ----------- ------------
+    Metric Name                                                Metric Unit Metric Value
+    ---------------------------------------------------------- ----------- ------------
+    l1tex__t_requests_pipe_lsu_mem_global_op_ld.sum                           161173948
+    l1tex__t_sector_hit_rate.pct                                         %        93.47
+    l1tex__t_sectors_pipe_lsu_mem_global_op_ld.sum                  sector   1460196734
+    smsp__average_thread_inst_executed_per_inst_executed.ratio                    17.59
+    smsp__issue_active.avg.pct_of_peak_sustained_active                  %        90.92
+    smsp__warps_issue_stalled_long_scoreboard.sum                     warp  13212485046
+    smsp__warps_issue_stalled_wait.sum                                warp   7317792494
+    ---------------------------------------------------------- ----------- ------------
+
+    Section: GPU Speed Of Light Throughput
+    ----------------------- ----------- ------------
+    Metric Name             Metric Unit Metric Value
+    ----------------------- ----------- ------------
+    DRAM Frequency                  Ghz         1.59
+    SM Frequency                    Ghz         1.76
+    Elapsed Cycles                cycle      5165026
+    Memory Throughput                 %        55.84
+    DRAM Throughput                   %        37.05
+    Duration                         ms         2.92
+    L1/TEX Cache Throughput           %        56.18
+    L2 Cache Throughput               %        27.58
+    SM Active Cycles              cycle   5121012.38
+    Compute (SM) Throughput           %        90.26
+    ----------------------- ----------- ------------
+
+    INF   This workload is utilizing greater than 80.0% of the available compute or memory performance of this device.  
+          To further improve performance, work will likely need to be shifted from the most utilized to another unit.   
+          Start by analyzing workloads in the Compute Workload Analysis section.                                        
+
+  contains_warp_parallel_fn_heterogeneous(column_device_view, string_view, bool *, const int *, int) (19119, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 9.0
+    Section: Command line profiler metrics
+    ---------------------------------------------------------- ----------- ------------
+    Metric Name                                                Metric Unit Metric Value
+    ---------------------------------------------------------- ----------- ------------
+    l1tex__t_requests_pipe_lsu_mem_global_op_ld.sum                           563437624
+    l1tex__t_sector_hit_rate.pct                                         %        82.95
+    l1tex__t_sectors_pipe_lsu_mem_global_op_ld.sum                  sector   1651903930
+    smsp__average_thread_inst_executed_per_inst_executed.ratio                    31.97
+    smsp__issue_active.avg.pct_of_peak_sustained_active                  %        86.41
+    smsp__warps_issue_stalled_long_scoreboard.sum                     warp  60468501516
+    smsp__warps_issue_stalled_wait.sum                                warp  37781767446
+    ---------------------------------------------------------- ----------- ------------
+
+    Section: GPU Speed Of Light Throughput
+    ----------------------- ----------- ------------
+    Metric Name             Metric Unit Metric Value
+    ----------------------- ----------- ------------
+    DRAM Frequency                  Ghz         1.59
+    SM Frequency                    Ghz         1.77
+    Elapsed Cycles                cycle     26466460
+    Memory Throughput                 %        29.60
+    DRAM Throughput                   %        29.60
+    Duration                         ms        14.96
+    L1/TEX Cache Throughput           %        19.81
+    L2 Cache Throughput               %        23.39
+    SM Active Cycles              cycle  26216594.51
+    Compute (SM) Throughput           %        85.10
+    ----------------------- ----------- ------------
+
+    INF   This workload is utilizing greater than 80.0% of the available compute or memory performance of this device.  
+          To further improve performance, work will likely need to be shifted from the most utilized to another unit.   
+          Start by analyzing workloads in the Compute Workload Analysis section.                                        
+

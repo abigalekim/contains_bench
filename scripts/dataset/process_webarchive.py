@@ -8,8 +8,8 @@ import sys
 
 # Update this to match your downloaded WARC file name
 # It will be something like: CC-MAIN-20251117134315-20251117164315-00000.warc.gz
-input_file = "/mnt/wiscdb/abigale/CC-MAIN-20251106200718-20251106230718-00000.warc.gz"  # Update this!
-output_file = "/mnt/wiscdb/abigale/string_dataset_csvs/common_crawl_urls.csv"
+input_file = "/home/akkim7/CC-MAIN-20260305070756-20260305100756-00000.warc.gz"  # Update this!
+output_file = "/home/akkim7/string_datasets/common_crawl_urls.csv"
 lengths = []
 urls = []
 
@@ -62,7 +62,7 @@ print("Writing to CSV...")
 with open(output_file, "w", encoding="utf-8", newline='') as f_out:
     writer = csv.writer(f_out)
     total_bytes = 0
-    total_len = 5 * GIGABYTE
+    total_len = 10 * GIGABYTE
     gb_written = 0
     row_idx = 0
     

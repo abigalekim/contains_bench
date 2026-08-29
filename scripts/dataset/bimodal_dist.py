@@ -4,7 +4,7 @@ import sys
 import numpy as np
 import random
 
-output_dir = "/home/ubuntu/string_datasets"
+output_dir = "/home/akkim7/string_datasets"
 
 GIGABYTE = 1073741824
 MEGABYTE = 1048576
@@ -27,7 +27,7 @@ if __name__ == '__main__':
   output_csv = csv.writer(output_file)
 
   total_bytes = 0
-  total_len = GIGABYTE
+  total_len = 10 * GIGABYTE
   gb_written = 0
 
   print(f"Starting writing data for bimodal distribution ({mean1}, {sigma1}), ({mean2}, {sigma2})")
